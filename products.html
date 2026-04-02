@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Projects — Verniq UAVs</title>
+  <meta name="description" content="Explore the project portfolio of Verniq UAVs: custom-built drone systems delivered across defence, agriculture, industrial inspection, mapping, education, and cinematography." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="images/icon.svg" alt="Verniq Logo Icon" class="nav-logo-icon-img" />
+        <div class="nav-logo-text-wrapper">
+          <span class="nav-logo-title">Verniq UAVs</span>
+          <span class="nav-logo-tagline">Next gen aerial solutions</span>
+        </div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="products.html" class="nav-link active">Projects</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="contact.html" class="nav-cta">Get in Touch</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <div class="page-header-content">
+        <p class="page-breadcrumb">
+          <a href="index.html">Home</a><span class="separator">/</span><span>Projects</span>
+        </p>
+        <h1 class="page-title">Our Projects</h1>
+        <p class="section-subtitle">
+          A portfolio of custom-built UAV systems delivered for 
+          real-world missions across industries.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter + Products -->
+  <section class="section" id="all-products">
+    <div class="container">
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="defence">Defence</button>
+        <button class="filter-btn" data-filter="agriculture">Agriculture</button>
+        <button class="filter-btn" data-filter="mapping">Mapping</button>
+        <button class="filter-btn" data-filter="education">Education</button>
+        <button class="filter-btn" data-filter="cinematography">Cinematography</button>
+      </div>
+
+      <div class="product-grid" style="margin-top: 40px;">
+
+        <!-- DEFENCE -->
+        <div class="product-card" data-category="defence">
+          <div class="product-image">
+            <img src="images/surveillance.jpg" alt="Tactical Surveillance UAV" />
+            <div class="product-image-overlay"></div>
+          </div>
+          <div class="product-body">
+            <span class="product-category">Defence · Surveillance</span>
+            <h3 class="product-title">Tactical Surveillance UAV</h3>
+            <p class="product-desc">High-endurance platform with thermal imaging and AI-powered detection for boundary
+              security and reconnaissance.</p>
+            <span class="product-link" style="color: var(--text-accent);">Delivered ✓</span>
+          </div>
+        </div>
+
+        <!-- AGRICULTURE -->
+        <div class="product-card" data-category="agriculture">
+          <div class="product-image">
+            <img src="images/agri.png" alt="Agricultural Spray Drone" />
+            <div class="product-image-overlay"></div>
+          </div>
+          <div class="product-body">
+            <span class="product-category">Agriculture · Spraying</span>
+            <h3 class="product-title">Verniq Agri-Shield</h3>
+            <p class="product-desc">Autonomous precision spraying system with terrain-following sensors for optimized
+              crop health and farm management.</p>
+            <span class="product-link" style="color: var(--text-accent);">Delivered ✓</span>
+          </div>
+        </div>
+
+        <!-- INDUSTRIAL -->
+        <div class="product-card" data-category="defence">
+          <div class="product-image">
+            <img src="images/FPV.png" alt="FPV combact UAV" />
+            <div class="product-image-overlay"></div>
+          </div>
+          <div class="product-body">
+            <span class="product-category">Defence · FPV</span>
+            <h3 class="product-title">FPV combact UAV</h3>
+            <p class="product-desc">Specialized UAV for defence and security purposes.</p>
+            <span class="product-link" style="color: var(--text-accent);">Delivered ✓</span>
+          </div>
+        </div>
+
+        <!-- MAPPING -->
+        <div class="product-card" data-category="mapping">
+          <div class="product-image">
+            <img src="images/Mapping.jpg" alt="Survey & Mapping Drone" />
+            <div class="product-image-overlay"></div>
+          </div>
+          <div class="product-body">
+            <span class="product-category">Mapping · Survey</span>
+            <h3 class="product-title">TerraMapper Pro</h3>
+            <p class="product-desc">Multi-rotor options for survey-grade 3D mapping, photogrammetry, and
+              cadastral surveying.</p>
+            <span class="product-link" style="color: var(--text-accent);">Delivered ✓</span>
+          </div>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="product-card" data-category="education">
+          <div class="product-image">
+            <img src="images/education.png" alt="Educational Drone" />
+            <div class="product-image-overlay"></div>
+          </div>
+          <div class="product-body">
+            <span class="product-category">Education · Research</span>
+            <h3 class="product-title">Educational Drone</h3>
+            <p class="product-desc">Open-source drone kits designed for universities for research in
+              autonomous navigation and AI.</p>
+            <span class="product-link" style="color: var(--text-accent);">Delivered ✓</span>
+          </div>
+        </div>
+
+        <!-- CINEMATOGRAPHY -->
+        <div class="product-card" data-category="cinematography">
+          <div class="product-image">
+            <img src="images/photo drone.png  " alt="Aerial Cinematography Drone" />
+            <div class="product-image-overlay"></div>
+          </div>
+          <div class="product-body">
+            <span class="product-category">Cinematography · Aerial</span>
+            <h3 class="product-title">SkyFrame Cinema UAV</h3>
+            <p class="product-desc">Precision stabilized aerial platform for professional cinema-grade videography and
+              high-altitude photography.</p>
+            <span class="product-link" style="color: var(--text-accent);">Delivered ✓</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section section section-dark">
+    <div class="container">
+      <div class="cta-content reveal">
+        <p class="section-label" style="justify-content: center;">Enquire</p>
+        <h2 class="cta-title">Need a Custom<br/>UAV Solution?</h2>
+        <p class="cta-text">
+          Our engineering team works across defence, industry, and education 
+          to develop mission-specific platforms and systems.
+        </p>
+        <a href="contact.html" class="btn btn-primary btn-arrow">Request Specifications</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <img src="images/icon.svg" alt="Verniq Logo Icon" class="nav-logo-icon-img" />
+            <div class="nav-logo-text-wrapper">
+              <span class="nav-logo-title">Verniq UAVs</span>
+              <span class="nav-logo-tagline">Next gen aerial solutions</span>
+            </div>
+          </a>
+          <p class="footer-brand-text">
+            India's premier manufacturer of customized UAV solutions 
+            bridging defence, industry, and education.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Company</h4>
+          <a href="about.html" class="footer-link">About Us</a>
+          <a href="about.html#leadership" class="footer-link">Leadership</a>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Projects</h4>
+          <a href="products.html" class="footer-link">Defence UAVs</a>
+          <a href="products.html" class="footer-link">Agriculture</a>
+          <a href="products.html" class="footer-link">Industrial</a>
+          <a href="products.html" class="footer-link">Education</a>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Contact</h4>
+          <a href="contact.html" class="footer-link">Get in Touch</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Verniq UAVs. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-link" aria-label="LinkedIn">in</a>
+          <a href="#" class="footer-social-link" aria-label="Twitter">𝕏</a>
+          <a href="#" class="footer-social-link" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
