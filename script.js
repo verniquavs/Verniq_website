@@ -1,15 +1,16 @@
 /* ============================================
-   VERNIQ UAVs — Interactive Scripts
+   VERNIQ UAVs — Aerospace Interactive Layer
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
+
   // ============================================
   // Cinematic Logo Intro
   // ============================================
   const videoIntro = document.getElementById('videoIntro');
   const introSkip = document.getElementById('introSkip');
 
-  // --- Particle Grid ---
+  // Particle Grid (intro)
   const canvas = document.getElementById('introParticles');
   let animFrameId;
   if (canvas) {
@@ -18,23 +19,23 @@ document.addEventListener('DOMContentLoaded', () => {
     canvas.height = window.innerHeight;
 
     const particles = [];
-    const particleCount = 80;
+    const particleCount = 90;
 
     for (let i = 0; i < particleCount; i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.4,
-        vy: (Math.random() - 0.5) * 0.4,
-        r: Math.random() * 1.5 + 0.5,
+        vx: (Math.random() - 0.5) * 0.35,
+        vy: (Math.random() - 0.5) * 0.35,
+        r: Math.random() * 1.4 + 0.4,
       });
     }
 
     function drawParticles() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = 'rgba(255,255,255,0.4)';
-      ctx.strokeStyle = 'rgba(10,132,255,0.08)';
-      ctx.lineWidth = 0.5;
+      ctx.fillStyle = 'rgba(34, 211, 238, 0.55)';
+      ctx.strokeStyle = 'rgba(34, 211, 238, 0.10)';
+      ctx.lineWidth = 0.6;
 
       for (let i = 0; i < particles.length; i++) {
         const p = particles[i];
@@ -47,15 +48,16 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
         ctx.fill();
 
-        // Connect nearby particles
         for (let j = i + 1; j < particles.length; j++) {
           const q = particles[j];
           const dist = Math.hypot(p.x - q.x, p.y - q.y);
-          if (dist < 150) {
+          if (dist < 160) {
+            ctx.globalAlpha = 1 - dist / 160;
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(q.x, q.y);
             ctx.stroke();
+            ctx.globalAlpha = 1;
           }
         }
       }
@@ -64,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     drawParticles();
   }
 
-  // --- Orchestrated Intro Sequence ---
+  // Orchestrated intro sequence
   function runIntroSequence() {
     const path1 = document.getElementById('logoPath1');
     const path2 = document.getElementById('logoPath2');
@@ -73,66 +75,48 @@ document.addEventListener('DOMContentLoaded', () => {
     const tagline = document.getElementById('introTagline');
     const accentLine = document.getElementById('introAccentLine');
 
-    // Step 1: Draw SVG paths (0ms)
-    setTimeout(() => {
-      if (path1) path1.classList.add('drawn');
-    }, 300);
-    setTimeout(() => {
-      if (path2) path2.classList.add('drawn');
-    }, 600);
+    setTimeout(() => path1 && path1.classList.add('drawn'), 300);
+    setTimeout(() => path2 && path2.classList.add('drawn'), 600);
 
-    // Step 2: Fill the logo + glow ring (1.8s)
     setTimeout(() => {
       if (path1) path1.classList.add('filled');
       if (path2) path2.classList.add('filled');
       if (glowRing) glowRing.classList.add('active');
     }, 2000);
 
-    // Step 3: Typewriter company name (2.5s)
     setTimeout(() => {
-      if (companyName) {
-        const text = 'VERNIQ UAVS';
-        const wrap = companyName.querySelector('.intro-char-wrap');
-        if (wrap) {
-          text.split('').forEach((char, i) => {
-            const span = document.createElement('span');
-            span.className = 'intro-char';
-            span.textContent = char === ' ' ? '\u00A0' : char;
-            span.style.animationDelay = `${i * 0.06}s`;
-            wrap.appendChild(span);
-          });
-        }
-      }
+      if (!companyName) return;
+      const text = 'VERNIQ UAVS';
+      const wrap = companyName.querySelector('.intro-char-wrap');
+      if (!wrap) return;
+      text.split('').forEach((char, i) => {
+        const span = document.createElement('span');
+        span.className = 'intro-char';
+        span.textContent = char === ' ' ? ' ' : char;
+        span.style.animationDelay = `${i * 0.06}s`;
+        wrap.appendChild(span);
+      });
     }, 2500);
 
-    // Step 4: Tagline + accent line (3.4s)
     setTimeout(() => {
-      if (tagline) tagline.classList.add('visible');
-      if (accentLine) accentLine.classList.add('visible');
+      tagline && tagline.classList.add('visible');
+      accentLine && accentLine.classList.add('visible');
     }, 3400);
   }
 
   function dismissIntro() {
-    if (videoIntro) {
-      videoIntro.classList.add('hidden');
-      document.body.style.overflow = '';
-      if (animFrameId) cancelAnimationFrame(animFrameId);
-      setTimeout(() => {
-        videoIntro.style.display = 'none';
-      }, 1000);
-    }
+    if (!videoIntro) return;
+    videoIntro.classList.add('hidden');
+    document.body.style.overflow = '';
+    if (animFrameId) cancelAnimationFrame(animFrameId);
+    setTimeout(() => { videoIntro.style.display = 'none'; }, 1000);
   }
 
   if (videoIntro) {
     document.body.style.overflow = 'hidden';
     runIntroSequence();
-
-    // Auto-dismiss after 6 seconds
-    setTimeout(dismissIntro, 6000);
-
-    // Click anywhere to dismiss
+    setTimeout(dismissIntro, 3200);
     videoIntro.addEventListener('click', dismissIntro);
-
     if (introSkip) {
       introSkip.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -142,23 +126,36 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ============================================
-  // Navigation — Scroll Effect
+  // Hero Radar Sweep — slowed, instrumentation-like
   // ============================================
-  const navbar = document.getElementById('navbar');
-
-  function handleNavScroll() {
-    if (window.scrollY > 80) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
+  const radarSweepGroup = document.getElementById('radarSweepGroup');
+  if (radarSweepGroup && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    let angle = 0;
+    let last = performance.now();
+    function sweep(now) {
+      const dt = Math.min(now - last, 60);
+      last = now;
+      angle = (angle + dt * 0.018) % 360; // ~6.5 sec per revolution
+      radarSweepGroup.setAttribute('transform', `rotate(${angle} 400 400)`);
+      requestAnimationFrame(sweep);
     }
+    requestAnimationFrame(sweep);
   }
 
-  window.addEventListener('scroll', handleNavScroll);
+  // ============================================
+  // Navigation scroll state
+  // ============================================
+  const navbar = document.getElementById('navbar');
+  function handleNavScroll() {
+    if (!navbar) return;
+    if (window.scrollY > 60) navbar.classList.add('scrolled');
+    else navbar.classList.remove('scrolled');
+  }
+  window.addEventListener('scroll', handleNavScroll, { passive: true });
   handleNavScroll();
 
   // ============================================
-  // Mobile Menu Toggle
+  // Mobile menu toggle
   // ============================================
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
@@ -168,8 +165,6 @@ document.addEventListener('DOMContentLoaded', () => {
       navToggle.classList.toggle('active');
       navLinks.classList.toggle('active');
     });
-
-    // Close menu when clicking a link
     navLinks.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         navToggle.classList.remove('active');
@@ -179,173 +174,137 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ============================================
-  // Scroll Reveal Animations
+  // Scroll reveal
   // ============================================
   const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .stagger-children');
-
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        // Don't unobserve — keep it visible
-      }
+      if (entry.isIntersecting) entry.target.classList.add('visible');
     });
-  }, {
-    threshold: 0.15,
-    rootMargin: '0px 0px -50px 0px'
-  });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
 
   revealElements.forEach(el => revealObserver.observe(el));
 
   // ============================================
-  // Counter Animation
+  // Counter animation
   // ============================================
   const counters = document.querySelectorAll('.counter');
-
   const counterObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const counter = entry.target;
-        const target = parseInt(counter.getAttribute('data-target'));
-        const duration = 2000;
-        const startTime = performance.now();
+      if (!entry.isIntersecting) return;
+      const counter = entry.target;
+      const target = parseInt(counter.getAttribute('data-target'), 10);
+      const duration = 2000;
+      const startTime = performance.now();
 
-        function updateCounter(currentTime) {
-          const elapsed = currentTime - startTime;
-          const progress = Math.min(elapsed / duration, 1);
-
-          // Ease out quad
-          const easeOut = 1 - (1 - progress) * (1 - progress);
-          const current = Math.floor(easeOut * target);
-
-          counter.textContent = current.toLocaleString();
-
-          if (progress < 1) {
-            requestAnimationFrame(updateCounter);
-          } else {
-            counter.textContent = target.toLocaleString();
-          }
-        }
-
-        requestAnimationFrame(updateCounter);
-        counterObserver.unobserve(counter);
+      function update(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        counter.textContent = Math.floor(eased * target).toLocaleString();
+        if (progress < 1) requestAnimationFrame(update);
+        else counter.textContent = target.toLocaleString();
       }
+      requestAnimationFrame(update);
+      counterObserver.unobserve(counter);
     });
-  }, {
-    threshold: 0.5
-  });
+  }, { threshold: 0.4 });
 
   counters.forEach(counter => counterObserver.observe(counter));
 
   // ============================================
-  // Active Nav Link Highlight
+  // Active nav state by current page
   // ============================================
-  const sections = document.querySelectorAll('section[id]');
-  const navLinksAll = document.querySelectorAll('.nav-link');
-
-  // Set active based on the current page
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-
-  navLinksAll.forEach(link => {
+  document.querySelectorAll('.nav-link').forEach(link => {
     const href = link.getAttribute('href');
-    if (href === currentPage) {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
-    }
+    if (href === currentPage) link.classList.add('active');
   });
 
   // ============================================
-  // Smooth Scroll for Anchor Links
+  // Smooth scroll for anchors
   // ============================================
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href === '#' || href.length < 2) return;
+      const target = document.querySelector(href);
+      if (!target) return;
       e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        const offsetTop = target.offsetTop - 80;
-        window.scrollTo({
-          top: offsetTop,
-          behavior: 'smooth'
-        });
-      }
+      const offsetTop = target.getBoundingClientRect().top + window.scrollY - 90;
+      window.scrollTo({ top: offsetTop, behavior: 'smooth' });
     });
   });
 
   // ============================================
-  // Parallax Effect on Hero
+  // Hero parallax
   // ============================================
   const heroBg = document.querySelector('.hero-bg img');
-
+  const heroGrid = document.querySelector('.hero-grid');
   if (heroBg) {
     window.addEventListener('scroll', () => {
       const scrolled = window.scrollY;
       if (scrolled < window.innerHeight) {
-        heroBg.style.transform = `translateY(${scrolled * 0.3}px) scale(1.1)`;
+        heroBg.style.transform = `translateY(${scrolled * 0.25}px) scale(1.08)`;
+        if (heroGrid) heroGrid.style.transform = `translateY(${scrolled * 0.1}px)`;
       }
-    });
+    }, { passive: true });
   }
 
   // ============================================
-  // Product Card Hover — Tilt Effect
+  // Product card subtle tilt
   // ============================================
   const productCards = document.querySelectorAll('.product-card');
-
   productCards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      const rotateX = (y - centerY) / 20;
-      const rotateY = (centerX - x) / 20;
-
-      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+      const cx = rect.width / 2;
+      const cy = rect.height / 2;
+      const rx = (y - cy) / 28;
+      const ry = (cx - x) / 28;
+      card.style.transform = `perspective(1100px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-6px)`;
     });
-
     card.addEventListener('mouseleave', () => {
-      card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+      card.style.transform = 'perspective(1100px) rotateX(0) rotateY(0) translateY(0)';
     });
   });
 
   // ============================================
-  // Products Page: Filter Logic
+  // Products page filter logic
   // ============================================
   const filterBtns = document.querySelectorAll('.filter-btn');
   const filterableCards = document.querySelectorAll('[data-category]');
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      // Update active filter
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
       const category = btn.getAttribute('data-filter');
-
       filterableCards.forEach(card => {
-        if (category === 'all' || card.getAttribute('data-category') === category) {
+        const matches = category === 'all' || card.getAttribute('data-category') === category;
+        if (matches) {
           card.style.display = '';
           card.style.opacity = '0';
           card.style.transform = 'translateY(20px)';
           requestAnimationFrame(() => {
-            card.style.transition = 'all 0.4s ease';
+            card.style.transition = 'all 0.4s cubic-bezier(0.16,1,0.3,1)';
             card.style.opacity = '1';
             card.style.transform = 'translateY(0)';
           });
         } else {
           card.style.opacity = '0';
           card.style.transform = 'translateY(20px)';
-          setTimeout(() => {
-            card.style.display = 'none';
-          }, 400);
+          setTimeout(() => { card.style.display = 'none'; }, 400);
         }
       });
     });
   });
 
   // ============================================
-  // Custom Order Form Handling (Web3Forms)
+  // Custom Order Form (Web3Forms)
   // ============================================
   const customOrderForm = document.getElementById('customOrderForm');
   const formStatus = document.getElementById('formStatus');
@@ -353,17 +312,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if (customOrderForm) {
     customOrderForm.addEventListener('submit', async function (e) {
       e.preventDefault();
-
       const submitBtn = document.getElementById('orderSubmitBtn');
       const originalText = submitBtn.textContent;
 
-      // Loading State
-      submitBtn.textContent = 'Sending Inquiry...';
+      submitBtn.textContent = 'Transmitting...';
       submitBtn.disabled = true;
       submitBtn.style.opacity = '0.7';
 
-      // Prepare Form Data for Web3Forms
-      // The access key is managed in the HTML form directly
       const formData = new FormData(customOrderForm);
 
       try {
@@ -371,27 +326,27 @@ document.addEventListener('DOMContentLoaded', () => {
           method: 'POST',
           body: formData
         });
-
         const data = await response.json();
 
         if (data.success) {
-          // Success Feedback
-          submitBtn.textContent = 'Inquiry Sent ✓';
-          submitBtn.style.background = '#c8a84e';
-          submitBtn.style.color = '#000';
-          submitBtn.style.borderColor = '#c8a84e';
+          submitBtn.textContent = 'Brief Received ✓';
+          submitBtn.style.background = '#34D399';
+          submitBtn.style.color = '#03161B';
+          submitBtn.style.borderColor = '#34D399';
 
           if (formStatus) {
-            formStatus.textContent = "Thank you! Your custom UAV inquiry has been received. Our team will contact you within 24 hours.";
+            formStatus.textContent = 'Brief transmitted. Our engineering team will respond within 24 hours.';
             formStatus.style.display = 'block';
-            formStatus.style.color = '#4CAF50';
-            formStatus.style.marginTop = '15px';
+            formStatus.style.color = '#34D399';
+            formStatus.style.marginTop = '20px';
             formStatus.style.textAlign = 'center';
+            formStatus.style.fontFamily = 'JetBrains Mono, monospace';
+            formStatus.style.fontSize = '0.85rem';
+            formStatus.style.letterSpacing = '0.1em';
           }
 
           customOrderForm.reset();
 
-          // Reset button after 5 seconds
           setTimeout(() => {
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
@@ -405,21 +360,19 @@ document.addEventListener('DOMContentLoaded', () => {
           throw new Error(data.message || 'Submission failed');
         }
       } catch (error) {
-        // Error Feedback
-        console.error("Form Submission Error:", error);
-        submitBtn.textContent = 'Submission Failed ✕';
-        submitBtn.style.background = '#ff4444';
-        submitBtn.style.borderColor = '#ff4444';
+        console.error('Form Submission Error:', error);
+        submitBtn.textContent = 'Transmission Failed ✕';
+        submitBtn.style.background = '#F87171';
+        submitBtn.style.borderColor = '#F87171';
 
         if (formStatus) {
-          formStatus.textContent = "Oops! Something went wrong. Please try again or email us directly at verniquavs@gmail.com.";
+          formStatus.textContent = 'Transmission failed. Please retry, or email verniquavs@gmail.com directly.';
           formStatus.style.display = 'block';
-          formStatus.style.color = '#ff4444';
-          formStatus.style.marginTop = '15px';
+          formStatus.style.color = '#F87171';
+          formStatus.style.marginTop = '20px';
           formStatus.style.textAlign = 'center';
         }
 
-        // Reset button to try again
         setTimeout(() => {
           submitBtn.textContent = originalText;
           submitBtn.disabled = false;
@@ -433,39 +386,38 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ============================================
-  // Domain Card — Subtle glow on hover
+  // Domain card spotlight on hover
   // ============================================
   const domainCards = document.querySelectorAll('.domain-card');
-
   domainCards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
-
-      card.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255,255,255,0.04), var(--bg-card))`;
+      card.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(34, 211, 238, 0.07), var(--bg-card-hover))`;
     });
-
-    card.addEventListener('mouseleave', () => {
-      card.style.background = 'var(--bg-card)';
-    });
+    card.addEventListener('mouseleave', () => { card.style.background = ''; });
   });
 
   // ============================================
-  // Cursor Glow (Desktop only)
+  // Cursor glow (desktop only)
   // ============================================
-  if (window.innerWidth > 768) {
+  if (window.innerWidth > 992
+      && !window.matchMedia('(pointer: coarse)').matches
+      && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const cursorGlow = document.createElement('div');
     cursorGlow.style.cssText = `
       position: fixed;
-      width: 300px;
-      height: 300px;
+      width: 360px;
+      height: 360px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(255,255,255,0.015) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(34, 211, 238, 0.035) 0%, transparent 70%);
       pointer-events: none;
       z-index: 9998;
       transform: translate(-50%, -50%);
-      transition: left 0.1s, top 0.1s;
+      transition: opacity 0.3s ease;
+      mix-blend-mode: screen;
+      will-change: left, top;
     `;
     document.body.appendChild(cursorGlow);
 
@@ -473,5 +425,7 @@ document.addEventListener('DOMContentLoaded', () => {
       cursorGlow.style.left = e.clientX + 'px';
       cursorGlow.style.top = e.clientY + 'px';
     });
+    document.addEventListener('mouseleave', () => { cursorGlow.style.opacity = '0'; });
+    document.addEventListener('mouseenter', () => { cursorGlow.style.opacity = '1'; });
   }
 });

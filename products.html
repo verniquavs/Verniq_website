@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Projects — Verniq UAVs</title>
-  <meta name="description" content="Explore the project portfolio of Verniq UAVs: custom-built drone systems delivered across defence, agriculture, industrial inspection, mapping, education, and cinematography." />
+  <title>Platforms — Verniq UAVs</title>
+  <meta name="description" content="Verniq UAV platform datasheets — engineered aerial systems delivered for defence, mapping, surveillance, agriculture, industrial inspection, and research." />
+  <link rel="icon" type="image/svg+xml" href="images/icon.svg" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -13,18 +14,19 @@
   <nav class="navbar" id="navbar">
     <div class="container">
       <a href="index.html" class="nav-logo">
-        <img src="images/icon.svg" alt="Verniq Logo Icon" class="nav-logo-icon-img" />
+        <img src="images/icon.svg" alt="Verniq" class="nav-logo-icon-img" />
         <div class="nav-logo-text-wrapper">
           <span class="nav-logo-title">Verniq UAVs</span>
-          <span class="nav-logo-tagline">Next gen aerial solutions</span>
+          <span class="nav-logo-tagline">Advanced Aerial Systems</span>
         </div>
       </a>
       <div class="nav-links" id="navLinks">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="products.html" class="nav-link active">Projects</a>
+        <a href="about.html" class="nav-link">Company</a>
+        <a href="products.html" class="nav-link active">Platforms</a>
+        <a href="index.html#engineering" class="nav-link">Engineering</a>
         <a href="contact.html" class="nav-link">Contact</a>
-        <a href="contact.html" class="nav-cta">Get in Touch</a>
+        <a href="contact.html" class="nav-cta">Request Brief</a>
       </div>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -37,133 +39,331 @@
     <div class="container">
       <div class="page-header-content">
         <p class="page-breadcrumb">
-          <a href="index.html">Home</a><span class="separator">/</span><span>Projects</span>
+          <a href="index.html">Home</a><span class="separator">/</span><span>Platforms</span>
         </p>
-        <h1 class="page-title">Our Projects</h1>
+        <h1 class="page-title">Platform <span class="accent">Datasheets.</span></h1>
         <p class="section-subtitle">
-          A portfolio of custom-built UAV systems delivered for 
-          real-world missions across industries.
+          Engineered UAV platforms delivered for real-world missions. Each platform listed
+          here ships with full engineering documentation, integration handover, and lifecycle support.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Filter + Products -->
-  <section class="section" id="all-products">
+  <!-- Filter -->
+  <section class="section" style="padding-bottom: 0;" id="all-products">
     <div class="container">
       <div class="filter-bar reveal">
-        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn active" data-filter="all">All Platforms</button>
         <button class="filter-btn" data-filter="defence">Defence</button>
-        <button class="filter-btn" data-filter="agriculture">Agriculture</button>
         <button class="filter-btn" data-filter="mapping">Mapping</button>
-        <button class="filter-btn" data-filter="education">Education</button>
+        <button class="filter-btn" data-filter="agriculture">Agriculture</button>
+        <button class="filter-btn" data-filter="education">Research</button>
         <button class="filter-btn" data-filter="cinematography">Cinematography</button>
       </div>
+    </div>
+  </section>
 
-      <div class="product-grid" style="margin-top: 40px;">
+  <!-- Platform Datasheets -->
+  <section class="section" id="datasheets">
+    <div class="container">
 
-        <!-- DEFENCE -->
-        <div class="product-card" data-category="defence">
-          <div class="product-image">
-            <img src="images/surveillance.jpg" alt="Tactical Surveillance UAV" />
-            <div class="product-image-overlay"></div>
-          </div>
-          <div class="product-body">
-            <span class="product-category">Defence · Surveillance</span>
-            <h3 class="product-title">Tactical Surveillance UAV</h3>
-            <p class="product-desc">High-endurance platform with thermal imaging and AI-powered detection for boundary
-              security and reconnaissance.</p>
-            <span class="product-link" style="color: var(--text-accent);">Delivered ✓</span>
+      <!-- ============================================
+           VRN-TSU-01 · Tactical Surveillance UAV
+           ============================================ -->
+      <div class="platform-detail reveal" data-category="defence">
+        <div>
+          <div class="media-slot media-slot--4x3">
+            <div class="media-slot-inner">
+              <div class="media-slot-icon">
+                <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14"/><circle cx="12" cy="12" r="3"/></svg>
+              </div>
+              <div class="media-slot-tag">// VRN-TSU-01.JPG</div>
+              <div class="media-slot-title">Tactical Surveillance UAV</div>
+              <div class="media-slot-hint">Studio shot · neutral background · 3/4 angle preferred</div>
+            </div>
           </div>
         </div>
-
-        <!-- AGRICULTURE -->
-        <div class="product-card" data-category="agriculture">
-          <div class="product-image">
-            <img src="images/agri.png" alt="Agricultural Spray Drone" />
-            <div class="product-image-overlay"></div>
+        <div>
+          <div class="platform-meta">// VRN-TSU-01 · Defence · ISR Multirotor</div>
+          <h3 class="platform-name">Tactical Surveillance UAV</h3>
+          <p class="platform-blurb">
+            Multirotor ISR platform with thermal &amp; EO sensing, encrypted C2, and on-board AI detection.
+            Optimized for persistent observation and reconnaissance.
+          </p>
+          <div class="spec-block">
+            <div class="spec-block-head"><span>Datasheet · Rev 1.0</span><span class="doc-id">VRN-TSU-DS-001</span></div>
+            <table class="spec-table">
+              <tr><td>Configuration</td><td>Quadcopter · X-frame</td></tr>
+              <tr><td>MTOW</td><td>7.4 <span class="unit">kg</span></td></tr>
+              <tr><td>Payload Capacity</td><td>1.8 <span class="unit">kg</span></td></tr>
+              <tr><td>Endurance</td><td>45 <span class="unit">min</span> @ payload</td></tr>
+              <tr><td>Operating Range</td><td>10 <span class="unit">km</span> BLOS · encrypted</td></tr>
+              <tr><td>Service Ceiling</td><td>4,500 <span class="unit">m AMSL</span></td></tr>
+              <tr><td>Wind Resistance</td><td>12 <span class="unit">m/s</span> sustained · 15 <span class="unit">m/s</span> gust</td></tr>
+              <tr><td>Flight Controller</td><td>PX4 / ArduPilot · custom firmware</td></tr>
+              <tr><td>Navigation</td><td>RTK GNSS + VIO fallback</td></tr>
+              <tr><td>Datalink</td><td>AES-256 · frequency-agile · video downlink</td></tr>
+              <tr><td>Compute</td><td>NVIDIA Jetson Orin · on-board AI</td></tr>
+              <tr><td>Payload Compatibility</td><td>EO/IR · LiDAR · multispectral · custom</td></tr>
+            </table>
           </div>
-          <div class="product-body">
-            <span class="product-category">Agriculture · Spraying</span>
-            <h3 class="product-title">Verniq Agri-Shield</h3>
-            <p class="product-desc">Autonomous precision spraying system with terrain-following sensors for optimized
-              crop health and farm management.</p>
-            <span class="product-link" style="color: var(--text-accent);">Delivered ✓</span>
-          </div>
-        </div>
-
-        <!-- INDUSTRIAL -->
-        <div class="product-card" data-category="defence">
-          <div class="product-image">
-            <img src="images/FPV.png" alt="FPV combact UAV" />
-            <div class="product-image-overlay"></div>
-          </div>
-          <div class="product-body">
-            <span class="product-category">Defence · FPV</span>
-            <h3 class="product-title">FPV combact UAV</h3>
-            <p class="product-desc">Specialized UAV for defence and security purposes.</p>
-            <span class="product-link" style="color: var(--text-accent);">Delivered ✓</span>
-          </div>
-        </div>
-
-        <!-- MAPPING -->
-        <div class="product-card" data-category="mapping">
-          <div class="product-image">
-            <img src="images/Mapping.jpg" alt="Survey & Mapping Drone" />
-            <div class="product-image-overlay"></div>
-          </div>
-          <div class="product-body">
-            <span class="product-category">Mapping · Survey</span>
-            <h3 class="product-title">TerraMapper Pro</h3>
-            <p class="product-desc">Multi-rotor options for survey-grade 3D mapping, photogrammetry, and
-              cadastral surveying.</p>
-            <span class="product-link" style="color: var(--text-accent);">Delivered ✓</span>
+          <div style="margin-top: 22px; display: flex; gap: 12px;">
+            <a href="contact.html" class="btn btn-outline btn-arrow">Request Datasheet</a>
+            <span class="product-status">Delivered</span>
           </div>
         </div>
+      </div>
 
-        <!-- EDUCATION -->
-        <div class="product-card" data-category="education">
-          <div class="product-image">
-            <img src="images/education.png" alt="Educational Drone" />
-            <div class="product-image-overlay"></div>
-          </div>
-          <div class="product-body">
-            <span class="product-category">Education · Research</span>
-            <h3 class="product-title">Educational Drone</h3>
-            <p class="product-desc">Open-source drone kits designed for universities for research in
-              autonomous navigation and AI.</p>
-            <span class="product-link" style="color: var(--text-accent);">Delivered ✓</span>
+      <!-- ============================================
+           VRN-FPV-02 · FPV Combat UAV
+           ============================================ -->
+      <div class="platform-detail reveal" data-category="defence">
+        <div>
+          <div class="media-slot media-slot--4x3">
+            <div class="media-slot-inner">
+              <div class="media-slot-icon">
+                <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 22 2 22"/></svg>
+              </div>
+              <div class="media-slot-tag">// VRN-FPV-02.JPG</div>
+              <div class="media-slot-title">FPV Combat UAV</div>
+              <div class="media-slot-hint">Action / launch shot · low-angle works well</div>
+            </div>
           </div>
         </div>
-
-        <!-- CINEMATOGRAPHY -->
-        <div class="product-card" data-category="cinematography">
-          <div class="product-image">
-            <img src="images/photo drone.png  " alt="Aerial Cinematography Drone" />
-            <div class="product-image-overlay"></div>
+        <div>
+          <div class="platform-meta">// VRN-FPV-02 · Defence · FPV</div>
+          <h3 class="platform-name">FPV Combat UAV</h3>
+          <p class="platform-blurb">
+            Low-latency, ruggedized FPV airframe engineered for tactical strike and rapid-response
+            defence missions.
+          </p>
+          <div class="spec-block">
+            <div class="spec-block-head"><span>Datasheet · Rev 1.0</span><span class="doc-id">VRN-FPV-DS-002</span></div>
+            <table class="spec-table">
+              <tr><td>Configuration</td><td>Quadcopter · 7" / 10" variants</td></tr>
+              <tr><td>MTOW</td><td>2.6 <span class="unit">kg</span></td></tr>
+              <tr><td>Payload Capacity</td><td>0.8–1.5 <span class="unit">kg</span> (variant-dependent)</td></tr>
+              <tr><td>Endurance</td><td>18 <span class="unit">min</span> nominal</td></tr>
+              <tr><td>Operating Range</td><td>5–8 <span class="unit">km</span> · LOS</td></tr>
+              <tr><td>Top Speed</td><td>140 <span class="unit">km/h</span></td></tr>
+              <tr><td>Flight Controller</td><td>Betaflight / custom · FPV-tuned</td></tr>
+              <tr><td>Datalink</td><td>Analog &amp; digital FPV options</td></tr>
+              <tr><td>Compute</td><td>Lightweight on-board AI option</td></tr>
+              <tr><td>Use Case</td><td>Tactical · Strike · Reconnaissance</td></tr>
+            </table>
           </div>
-          <div class="product-body">
-            <span class="product-category">Cinematography · Aerial</span>
-            <h3 class="product-title">SkyFrame Cinema UAV</h3>
-            <p class="product-desc">Precision stabilized aerial platform for professional cinema-grade videography and
-              high-altitude photography.</p>
-            <span class="product-link" style="color: var(--text-accent);">Delivered ✓</span>
+          <div style="margin-top: 22px; display: flex; gap: 12px;">
+            <a href="contact.html" class="btn btn-outline btn-arrow">Request Datasheet</a>
+            <span class="product-status">Delivered</span>
           </div>
         </div>
+      </div>
 
+      <!-- ============================================
+           VRN-TMP-03 · TerraMapper Pro
+           ============================================ -->
+      <div class="platform-detail reveal" data-category="mapping">
+        <div>
+          <div class="media-slot media-slot--4x3">
+            <div class="media-slot-inner">
+              <div class="media-slot-icon">
+                <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6 L9 4 L15 6 L21 4 L21 18 L15 20 L9 18 L3 20 Z"/></svg>
+              </div>
+              <div class="media-slot-tag">// VRN-TMP-03.JPG</div>
+              <div class="media-slot-title">TerraMapper Pro</div>
+              <div class="media-slot-hint">Aircraft + ortho output composite suggested</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="platform-meta">// VRN-TMP-03 · Mapping · Survey</div>
+          <h3 class="platform-name">TerraMapper Pro</h3>
+          <p class="platform-blurb">
+            Survey-grade aerial platform for 3D photogrammetry, LiDAR, and cadastral surveying —
+            with PPK GNSS workflows for centimeter-class accuracy.
+          </p>
+          <div class="spec-block">
+            <div class="spec-block-head"><span>Datasheet · Rev 1.0</span><span class="doc-id">VRN-TMP-DS-003</span></div>
+            <table class="spec-table">
+              <tr><td>Configuration</td><td>Hexacopter / VTOL options</td></tr>
+              <tr><td>MTOW</td><td>9.2 <span class="unit">kg</span></td></tr>
+              <tr><td>Payload Capacity</td><td>2.4 <span class="unit">kg</span></td></tr>
+              <tr><td>Endurance</td><td>40 <span class="unit">min</span> @ mapping payload</td></tr>
+              <tr><td>Coverage</td><td>~80 <span class="unit">ha/sortie</span> @ 2 cm GSD</td></tr>
+              <tr><td>Accuracy</td><td>&lt; 2 <span class="unit">cm</span> horizontal · PPK</td></tr>
+              <tr><td>Imaging Payload</td><td>42 MP global-shutter · multispectral option</td></tr>
+              <tr><td>LiDAR Payload</td><td>Compact survey LiDAR · multi-return</td></tr>
+              <tr><td>Navigation</td><td>RTK / PPK GNSS</td></tr>
+              <tr><td>Output</td><td>Ortho · DEM · contours · point cloud</td></tr>
+            </table>
+          </div>
+          <div style="margin-top: 22px; display: flex; gap: 12px;">
+            <a href="contact.html" class="btn btn-outline btn-arrow">Request Datasheet</a>
+            <span class="product-status">Delivered</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================
+           VRN-AGS-04 · Verniq Agri-Shield
+           ============================================ -->
+      <div class="platform-detail reveal" data-category="agriculture">
+        <div>
+          <div class="media-slot media-slot--4x3">
+            <div class="media-slot-inner">
+              <div class="media-slot-icon">
+                <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L3 8 L12 13 L21 8 Z"/></svg>
+              </div>
+              <div class="media-slot-tag">// VRN-AGS-04.JPG</div>
+              <div class="media-slot-title">Verniq Agri-Shield</div>
+              <div class="media-slot-hint">Field shot · spraying or terrain-following preferred</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="platform-meta">// VRN-AGS-04 · Agriculture · Spraying</div>
+          <h3 class="platform-name">Verniq Agri-Shield</h3>
+          <p class="platform-blurb">
+            Autonomous precision sprayer with terrain-following sensors, variable-rate application,
+            and boundary-aware mission planning for high-yield agriculture.
+          </p>
+          <div class="spec-block">
+            <div class="spec-block-head"><span>Datasheet · Rev 1.0</span><span class="doc-id">VRN-AGS-DS-004</span></div>
+            <table class="spec-table">
+              <tr><td>Configuration</td><td>Hexacopter · agricultural duty</td></tr>
+              <tr><td>MTOW</td><td>22 <span class="unit">kg</span></td></tr>
+              <tr><td>Tank Capacity</td><td>10 <span class="unit">L</span></td></tr>
+              <tr><td>Coverage Rate</td><td>~2.4 <span class="unit">ha/sortie</span></td></tr>
+              <tr><td>Endurance</td><td>14 <span class="unit">min</span> per pack</td></tr>
+              <tr><td>Spray Width</td><td>4–6 <span class="unit">m</span> · 4-nozzle array</td></tr>
+              <tr><td>Terrain Following</td><td>mmWave radar · ±30 cm above canopy</td></tr>
+              <tr><td>Flight Mode</td><td>Autonomous mission · variable-rate</td></tr>
+              <tr><td>Field Logging</td><td>Per-hectare application reports</td></tr>
+            </table>
+          </div>
+          <div style="margin-top: 22px; display: flex; gap: 12px;">
+            <a href="contact.html" class="btn btn-outline btn-arrow">Request Datasheet</a>
+            <span class="product-status">Delivered</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================
+           VRN-EDU-05 · Verniq Edu-Stack
+           ============================================ -->
+      <div class="platform-detail reveal" data-category="education">
+        <div>
+          <div class="media-slot media-slot--4x3">
+            <div class="media-slot-inner">
+              <div class="media-slot-icon">
+                <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L21 8 L12 13 L3 8 Z"/><path d="M3 8 L3 16 L12 21 L21 16 L21 8"/></svg>
+              </div>
+              <div class="media-slot-tag">// VRN-EDU-05.JPG</div>
+              <div class="media-slot-title">Verniq Edu-Stack</div>
+              <div class="media-slot-hint">Lab / research kit shot</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="platform-meta">// VRN-EDU-05 · Education · Research</div>
+          <h3 class="platform-name">Verniq Edu-Stack</h3>
+          <p class="platform-blurb">
+            Open research drone kits engineered for universities and labs — for autonomous
+            navigation, AI perception, and aerospace systems training.
+          </p>
+          <div class="spec-block">
+            <div class="spec-block-head"><span>Datasheet · Rev 1.0</span><span class="doc-id">VRN-EDU-DS-005</span></div>
+            <table class="spec-table">
+              <tr><td>Configuration</td><td>Quadcopter · open-architecture</td></tr>
+              <tr><td>MTOW</td><td>2.8 <span class="unit">kg</span></td></tr>
+              <tr><td>Endurance</td><td>22 <span class="unit">min</span></td></tr>
+              <tr><td>Compute</td><td>Jetson Nano / Orin Nano</td></tr>
+              <tr><td>Software</td><td>ROS 2 · PX4 SITL · Python SDK</td></tr>
+              <tr><td>Sensors</td><td>Stereo camera · IMU · GPS · LiDAR option</td></tr>
+              <tr><td>Use Case</td><td>Autonomy research · AI perception · curriculum</td></tr>
+            </table>
+          </div>
+          <div style="margin-top: 22px; display: flex; gap: 12px;">
+            <a href="contact.html" class="btn btn-outline btn-arrow">Request Datasheet</a>
+            <span class="product-status">Delivered</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================
+           VRN-SKY-06 · SkyFrame Cinema UAV
+           ============================================ -->
+      <div class="platform-detail reveal" data-category="cinematography">
+        <div>
+          <div class="media-slot media-slot--4x3">
+            <div class="media-slot-inner">
+              <div class="media-slot-icon">
+                <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>
+              </div>
+              <div class="media-slot-tag">// VRN-SKY-06.JPG</div>
+              <div class="media-slot-title">SkyFrame Cinema UAV</div>
+              <div class="media-slot-hint">Aircraft with cinema gimbal · cinematic lighting</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="platform-meta">// VRN-SKY-06 · Cinematography · Aerial</div>
+          <h3 class="platform-name">SkyFrame Cinema UAV</h3>
+          <p class="platform-blurb">
+            Precision-stabilized aerial platform engineered for cinema-grade videography and
+            high-altitude photography in production environments.
+          </p>
+          <div class="spec-block">
+            <div class="spec-block-head"><span>Datasheet · Rev 1.0</span><span class="doc-id">VRN-SKY-DS-006</span></div>
+            <table class="spec-table">
+              <tr><td>Configuration</td><td>Hexacopter · cinema-tuned</td></tr>
+              <tr><td>MTOW</td><td>11 <span class="unit">kg</span></td></tr>
+              <tr><td>Payload Capacity</td><td>3.5 <span class="unit">kg</span> · cinema gimbal</td></tr>
+              <tr><td>Endurance</td><td>22 <span class="unit">min</span> @ cinema payload</td></tr>
+              <tr><td>Stabilization</td><td>3-axis cinema gimbal · sub-degree precision</td></tr>
+              <tr><td>Camera Compatibility</td><td>RED · Sony Venice · ARRI Alexa Mini</td></tr>
+              <tr><td>Flight Modes</td><td>ActiveTrack · POI · Cable Cam · Manual</td></tr>
+              <tr><td>Datalink</td><td>HD video downlink · director's monitor</td></tr>
+            </table>
+          </div>
+          <div style="margin-top: 22px; display: flex; gap: 12px;">
+            <a href="contact.html" class="btn btn-outline btn-arrow">Request Datasheet</a>
+            <span class="product-status">Delivered</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Custom Engineering Strip -->
+  <section class="section section-dark" id="capability-strip">
+    <div class="container">
+      <div class="reveal" style="text-align: center;">
+        <p class="section-label" style="justify-content: center;">Custom Engineering</p>
+        <h2 class="section-title">Mission profile<br/><span class="accent">not listed?</span></h2>
+        <p class="section-subtitle" style="margin: 0 auto;">
+          Verniq specializes in custom UAV engineering — from initial mission scoping through
+          flight test, qualification, and field deployment. Brief us on your operational
+          envelope and we'll engineer the aircraft.
+        </p>
+        <div class="hero-actions" style="margin-top: 36px;">
+          <a href="contact.html" class="btn btn-primary btn-arrow">Initiate Custom Project</a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="cta-section section section-dark">
+  <section class="cta-section section">
     <div class="container">
       <div class="cta-content reveal">
-        <p class="section-label" style="justify-content: center;">Enquire</p>
-        <h2 class="cta-title">Need a Custom<br/>UAV Solution?</h2>
+        <p class="section-label" style="justify-content: center;">Capability Brief</p>
+        <h2 class="cta-title">Need a custom<br/><span style="color: var(--accent-cyan);">UAV solution?</span></h2>
         <p class="cta-text">
-          Our engineering team works across defence, industry, and education 
-          to develop mission-specific platforms and systems.
+          Our engineering team works across defence, industry, and research to develop
+          mission-specific platforms with rapid turnaround.
         </p>
         <a href="contact.html" class="btn btn-primary btn-arrow">Request Specifications</a>
       </div>
@@ -176,46 +376,52 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="nav-logo">
-            <img src="images/icon.svg" alt="Verniq Logo Icon" class="nav-logo-icon-img" />
+            <img src="images/icon.svg" alt="Verniq" class="nav-logo-icon-img" />
             <div class="nav-logo-text-wrapper">
               <span class="nav-logo-title">Verniq UAVs</span>
-              <span class="nav-logo-tagline">Next gen aerial solutions</span>
+              <span class="nav-logo-tagline">Advanced Aerial Systems</span>
             </div>
           </a>
           <p class="footer-brand-text">
-            India's premier manufacturer of customized UAV solutions 
-            bridging defence, industry, and education.
+            Verniq engineers advanced autonomous aerial platforms for defence, surveillance,
+            mapping, and enterprise operations — designed and manufactured in India.
           </p>
         </div>
-
         <div>
           <h4 class="footer-heading">Company</h4>
-          <a href="about.html" class="footer-link">About Us</a>
+          <a href="about.html" class="footer-link">About</a>
           <a href="about.html#leadership" class="footer-link">Leadership</a>
+          <a href="about.html#story" class="footer-link">Our Story</a>
+          <a href="about.html#careers" class="footer-link">Careers</a>
         </div>
-
         <div>
-          <h4 class="footer-heading">Projects</h4>
-          <a href="products.html" class="footer-link">Defence UAVs</a>
-          <a href="products.html" class="footer-link">Agriculture</a>
-          <a href="products.html" class="footer-link">Industrial</a>
-          <a href="products.html" class="footer-link">Education</a>
+          <h4 class="footer-heading">Engineering</h4>
+          <a href="products.html" class="footer-link">Platforms</a>
+          <a href="index.html#engineering" class="footer-link">Process</a>
+          <a href="index.html#gcs" class="footer-link">Mission Control</a>
+          <a href="index.html#case-studies" class="footer-link">Case Studies</a>
         </div>
-
         <div>
-          <h4 class="footer-heading">Contact</h4>
-          <a href="contact.html" class="footer-link">Get in Touch</a>
+          <h4 class="footer-heading">Engagement</h4>
+          <a href="contact.html" class="footer-link">Request Brief</a>
+          <a href="contact.html" class="footer-link">Press &amp; Media</a>
+          <a href="contact.html" class="footer-link">Partnerships</a>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p class="footer-copy">&copy; 2026 Verniq UAVs. All rights reserved.</p>
+        <p class="footer-copy">© 2026 Verniq UAVs Pvt Ltd · All rights reserved</p>
         <div class="footer-socials">
           <a href="#" class="footer-social-link" aria-label="LinkedIn">in</a>
           <a href="#" class="footer-social-link" aria-label="Twitter">𝕏</a>
           <a href="#" class="footer-social-link" aria-label="YouTube">▶</a>
         </div>
       </div>
+
+      <p class="footer-compliance">
+        Designed &amp; Manufactured in India · DGCA-Aligned · iDEX Capability Profile<br/>
+        Defence configurations subject to SCOMET / export-control review · Restricted variants available under NDA
+      </p>
     </div>
   </footer>
 

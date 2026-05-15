@@ -4,64 +4,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Verniq UAVs — Custom UAVs. Built for Your Mission.</title>
+  <title>Verniq UAVs — Advanced Autonomous Aerial Systems</title>
   <meta name="description"
-    content="Verniq UAVs designs and manufactures fully customized drone systems for defence, agriculture, mapping, inspection, education, and aerial imaging. Built in India." />
+    content="Verniq UAVs engineers and deploys autonomous aerial platforms for defence, surveillance, mapping, and industrial operations. Built in India to aerospace-grade standards." />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Verniq UAVs — Custom UAVs. Built for Your Mission." />
+  <meta property="og:title" content="Verniq UAVs — Advanced Autonomous Aerial Systems" />
   <meta property="og:description"
-    content="Custom-built drone systems across defence, surveillance, mapping, inspection, agriculture, and aerial operations — engineered for real-world missions." />
+    content="Mission-grade UAV platforms engineered for defence, mapping, ISR, and industrial deployments." />
   <meta property="og:url" content="https://verniquavs.com/" />
-  <meta property="og:image" content="images/hero-bg.png" />
+  <meta property="og:image" content="images/Surveillance.jpg" />
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Verniq UAVs — Custom UAVs. Built for Your Mission." />
-  <meta name="twitter:description"
-    content="Custom-built drone systems engineered for real-world missions across industries." />
+  <meta name="twitter:title" content="Verniq UAVs — Advanced Autonomous Aerial Systems" />
+  <meta name="twitter:description" content="Engineered aerial platforms for defence, mapping, and industrial operations." />
 
+  <link rel="icon" type="image/svg+xml" href="images/icon.svg" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
   <!-- ============================================
-       CINEMATIC LOGO INTRO
+       INTRO (shortened)
        ============================================ -->
-  <div class="video-intro" id="videoIntro" role="dialog" aria-label="Welcome Introduction">
-    <!-- Particle Grid Background -->
+  <div class="video-intro" id="videoIntro" role="dialog" aria-label="Welcome">
     <canvas class="intro-particles" id="introParticles"></canvas>
 
-    <!-- Scanning Lines -->
-    <div class="intro-scan-lines"></div>
-
-    <!-- Center Content -->
     <div class="intro-center">
-      <!-- SVG Logo with path-draw animation -->
       <div class="intro-logo-wrap" id="introLogoWrap">
         <svg class="intro-svg-logo" viewBox="-420 -220 840 290" xmlns="http://www.w3.org/2000/svg">
-          <!-- Outer chevron (white fill, drawn as stroke first) -->
           <path id="logoPath1" class="intro-path" d="M0 -200 L-400 50 L-320 50 L0 -130 L320 50 L400 50 Z" fill="none"
-            stroke="#FFFFFF" stroke-width="3" stroke-dasharray="2000" stroke-dashoffset="2000" />
-          <!-- Inner chevron (blue outline) -->
+            stroke="#E6EDF5" stroke-width="3" stroke-dasharray="2000" stroke-dashoffset="2000" />
           <path id="logoPath2" class="intro-path" d="M0 -130 L-300 40 L-260 40 L0 -90 L260 40 L300 40 Z" fill="none"
-            stroke="#0A84FF" stroke-width="3" stroke-dasharray="1600" stroke-dashoffset="1600" />
+            stroke="#22D3EE" stroke-width="3" stroke-dasharray="1600" stroke-dashoffset="1600" />
         </svg>
-        <!-- Glow ring behind logo -->
         <div class="intro-glow-ring"></div>
       </div>
 
-      <!-- Company Name (typewriter) -->
       <h1 class="intro-company-name" id="introCompanyName">
         <span class="intro-char-wrap"></span>
       </h1>
 
-      <!-- Tagline -->
-      <p class="intro-tagline-text" id="introTagline">Next Gen Aerial Solutions</p>
-
-      <!-- Horizontal accent line -->
+      <p class="intro-tagline-text" id="introTagline">Advanced Autonomous Aerial Systems</p>
       <div class="intro-accent-line" id="introAccentLine"></div>
     </div>
 
@@ -69,63 +54,148 @@
   </div>
 
   <!-- ============================================
-       NAVIGATION
+       NAV
        ============================================ -->
   <nav class="navbar" id="navbar">
     <div class="container">
       <a href="index.html" class="nav-logo">
-        <img src="images/icon.svg" alt="Verniq Logo Icon" class="nav-logo-icon-img" />
+        <img src="images/icon.svg" alt="Verniq" class="nav-logo-icon-img" />
         <div class="nav-logo-text-wrapper">
           <span class="nav-logo-title">Verniq UAVs</span>
-          <span class="nav-logo-tagline">Next gen aerial solutions</span>
+          <span class="nav-logo-tagline">Advanced Aerial Systems</span>
         </div>
       </a>
 
       <div class="nav-links" id="navLinks">
         <a href="index.html" class="nav-link active">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="products.html" class="nav-link">Projects</a>
+        <a href="about.html" class="nav-link">Company</a>
+        <a href="products.html" class="nav-link">Platforms</a>
+        <a href="#engineering" class="nav-link">Engineering</a>
         <a href="contact.html" class="nav-link">Contact</a>
-        <a href="contact.html" class="nav-cta">Get in Touch</a>
+        <a href="contact.html" class="nav-cta">Request Brief</a>
       </div>
 
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
   <!-- ============================================
-       HERO SECTION
+       HERO — restrained, engineering-first
        ============================================ -->
   <section class="hero" id="hero">
+    <!-- HERO MEDIA SLOT — replace with cinematic UAV video/image -->
     <div class="hero-bg">
-      <img src="images/hero-bg.png" alt="Custom UAV solutions background" />
+      <div class="media-slot" style="position:absolute; inset:0; border:none; background: var(--bg-primary);">
+        <div class="media-slot-inner">
+          <div class="media-slot-icon">
+            <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21"/></svg>
+          </div>
+          <div class="media-slot-tag">// HERO_BG.MP4</div>
+          <div class="media-slot-title">Cinematic UAV Footage</div>
+          <div class="media-slot-hint">3–8s loop · 2560×1440 · muted · slow-pan or flight POV</div>
+        </div>
+      </div>
     </div>
     <div class="hero-overlay"></div>
+    <div class="hero-grid"></div>
+
+    <!-- subtle radar (toned down) -->
+    <svg class="hero-radar" id="heroRadar" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <radialGradient id="radarSweep" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.32"/>
+          <stop offset="60%" stop-color="#22D3EE" stop-opacity="0.04"/>
+          <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <circle cx="400" cy="400" r="380" fill="none" stroke="rgba(34,211,238,0.10)" stroke-width="1"/>
+      <circle cx="400" cy="400" r="260" fill="none" stroke="rgba(34,211,238,0.10)" stroke-width="1"/>
+      <circle cx="400" cy="400" r="140" fill="none" stroke="rgba(34,211,238,0.12)" stroke-width="1"/>
+      <line x1="20" y1="400" x2="780" y2="400" stroke="rgba(34,211,238,0.10)" stroke-width="1"/>
+      <line x1="400" y1="20" x2="400" y2="780" stroke="rgba(34,211,238,0.10)" stroke-width="1"/>
+      <g id="radarSweepGroup" style="transform-origin: 400px 400px;">
+        <path d="M400 400 L400 20 A380 380 0 0 1 750 280 Z" fill="url(#radarSweep)"/>
+      </g>
+      <circle cx="600" cy="280" r="3" fill="#22D3EE">
+        <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="320" cy="540" r="2.5" fill="#22D3EE">
+        <animate attributeName="opacity" values="0;1;0" dur="4s" begin="1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="500" cy="180" r="2" fill="#22D3EE">
+        <animate attributeName="opacity" values="0;1;0" dur="5s" begin="2s" repeatCount="indefinite"/>
+      </circle>
+    </svg>
+
+    <!-- HUD framing brackets -->
+    <div class="hero-frame hero-frame--tl">
+      <svg width="36" height="36" viewBox="0 0 36 36"><path d="M1 14 L1 1 L14 1" fill="none" stroke="#22D3EE" stroke-width="1"/></svg>
+    </div>
+    <div class="hero-frame hero-frame--tr">
+      <svg width="36" height="36" viewBox="0 0 36 36"><path d="M22 1 L35 1 L35 14" fill="none" stroke="#22D3EE" stroke-width="1"/></svg>
+    </div>
+    <div class="hero-frame hero-frame--bl">
+      <svg width="36" height="36" viewBox="0 0 36 36"><path d="M1 22 L1 35 L14 35" fill="none" stroke="#22D3EE" stroke-width="1"/></svg>
+    </div>
+    <div class="hero-frame hero-frame--br">
+      <svg width="36" height="36" viewBox="0 0 36 36"><path d="M35 22 L35 35 L22 35" fill="none" stroke="#22D3EE" stroke-width="1"/></svg>
+    </div>
+
+    <!-- HUD Readouts -->
+    <div class="hero-readout hero-readout--tl">
+      <div>SYS // <span class="ok">ONLINE</span></div>
+      <div>NAV // <span class="v">AUTONOMOUS</span></div>
+      <div>SIG // <span class="ok">ENCRYPTED</span></div>
+    </div>
+    <div class="hero-readout hero-readout--br">
+      <div>LAT 23.0225° N</div>
+      <div>LON 72.5714° E</div>
+      <div>ALT 00.000 M / AGL</div>
+    </div>
 
     <div class="hero-content">
-
+      <div class="hero-badge">
+        <span class="dot"></span>
+        <span>India · Aerospace Engineered</span>
+      </div>
 
       <div class="hero-title-wrapper">
         <h1 class="hero-title">
-          <span class="line">Custom UAVs</span>
-          <span class="line"><span class="outline-text">Built for Your</span></span>
-          <span class="line">Mission</span>
+          <span class="line">Engineering Autonomous</span>
+          <span class="line"><span class="outline-text">Aerial Systems for</span></span>
+          <span class="line"><span class="accent">Mission-Critical Operations.</span></span>
         </h1>
       </div>
 
       <p class="hero-description">
-        Verniq UAVs designs and manufactures fully customized drone systems tailored to your mission—across defence,
-        surveillance, mapping, inspection, agriculture, and aerial imaging. From concept to deployment, we build UAV
-        solutions engineered for performance, precision, and reliability.
+        Verniq designs, builds, and deploys mission-grade UAV platforms — from airframe
+        through avionics, autonomy, and field validation — engineered to perform where it matters.
       </p>
 
       <div class="hero-actions">
-        <a href="products.html" class="btn btn-primary btn-arrow">Our Capabilities</a>
-        <a href="about.html" class="btn btn-outline">Learn More</a>
+        <a href="products.html" class="btn btn-primary btn-arrow">Explore Platforms</a>
+        <a href="#engineering" class="btn btn-outline">Our Engineering</a>
+      </div>
+
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <div class="hero-meta-value">15+</div>
+          <div class="hero-meta-label">Platforms Delivered</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="hero-meta-value">2</div>
+          <div class="hero-meta-label">International Wins</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="hero-meta-value">6</div>
+          <div class="hero-meta-label">Mission Domains</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="hero-meta-value">24/7</div>
+          <div class="hero-meta-label">Engineering Support</div>
+        </div>
       </div>
     </div>
 
@@ -135,297 +205,685 @@
   </section>
 
   <!-- ============================================
-       MARQUEE / TICKER
+       MARQUEE
        ============================================ -->
   <div class="marquee-section">
     <div class="marquee-track" id="marqueeTrack">
-      <div class="marquee-item">Custom UAV Design <span class="separator"></span></div>
-      <div class="marquee-item">Precision Agriculture <span class="separator"></span></div>
+      <div class="marquee-item">Autonomous Flight <span class="separator"></span></div>
+      <div class="marquee-item">ISR &amp; Surveillance <span class="separator"></span></div>
+      <div class="marquee-item">Photogrammetry &amp; LiDAR <span class="separator"></span></div>
+      <div class="marquee-item">Tactical FPV Systems <span class="separator"></span></div>
+      <div class="marquee-item">Edge AI Detection <span class="separator"></span></div>
       <div class="marquee-item">Industrial Inspection <span class="separator"></span></div>
-      <div class="marquee-item">Surveying & Mapping <span class="separator"></span></div>
-      <div class="marquee-item">Public Safety <span class="separator"></span></div>
-      <div class="marquee-item">Defence & Surveillance <span class="separator"></span></div>
-      <div class="marquee-item">Aerial Cinematography <span class="separator"></span></div>
-      <div class="marquee-item">Advanced R&D <span class="separator"></span></div>
-      <!-- Duplicate for seamless loop -->
-      <div class="marquee-item">Custom UAV Design <span class="separator"></span></div>
       <div class="marquee-item">Precision Agriculture <span class="separator"></span></div>
+      <div class="marquee-item">Mission Engineering <span class="separator"></span></div>
+      <div class="marquee-item">Autonomous Flight <span class="separator"></span></div>
+      <div class="marquee-item">ISR &amp; Surveillance <span class="separator"></span></div>
+      <div class="marquee-item">Photogrammetry &amp; LiDAR <span class="separator"></span></div>
+      <div class="marquee-item">Tactical FPV Systems <span class="separator"></span></div>
+      <div class="marquee-item">Edge AI Detection <span class="separator"></span></div>
       <div class="marquee-item">Industrial Inspection <span class="separator"></span></div>
-      <div class="marquee-item">Surveying & Mapping <span class="separator"></span></div>
-      <div class="marquee-item">Public Safety <span class="separator"></span></div>
-      <div class="marquee-item">Defence & Surveillance <span class="separator"></span></div>
-      <div class="marquee-item">Aerial Cinematography <span class="separator"></span></div>
-      <div class="marquee-item">Advanced R&D <span class="separator"></span></div>
+      <div class="marquee-item">Precision Agriculture <span class="separator"></span></div>
+      <div class="marquee-item">Mission Engineering <span class="separator"></span></div>
     </div>
   </div>
 
   <!-- ============================================
-       DOMAINS / CAPABILITIES
+       COMPANY OVERVIEW (concise)
        ============================================ -->
-  <section class="section" id="capabilities">
+  <section class="section section-tech" id="overview">
     <div class="container">
-      <div class="reveal">
-        <p class="section-label">What We Do</p>
-        <h2 class="section-title">Multi-Domain<br />UAV Solutions</h2>
-        <p class="section-subtitle">
-          Custom-built drone systems across defence, surveillance, mapping,
-          inspection, agriculture, and aerial operations—engineered for
-          real-world missions.
-        </p>
-      </div>
-
-      <div class="domains-grid stagger-children">
-        <div class="domain-card">
-          <div class="domain-icon">🛡</div>
-          <h3 class="domain-name">Defence</h3>
-          <p class="domain-desc">Specialized tactical platforms for surveillance, reconnaissance, and boundary security.
+      <div style="display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; align-items: start;" class="overview-grid">
+        <div class="reveal">
+          <p class="section-label">Company</p>
+          <h2 class="section-title">An Indian aerospace<br/>company, building<br/><span class="accent">flight-grade autonomy.</span></h2>
+        </div>
+        <div class="reveal-right" style="padding-top: 14px;">
+          <p style="font-size: 1.06rem; color: var(--text-secondary); line-height: 1.85; margin-bottom: 22px;">
+            We engineer aerial platforms in-house — airframe, avionics, autonomy software, and ground
+            control — and deliver them validated, documented, and ready for the field.
           </p>
-        </div>
-
-        <div class="domain-card">
-          <div class="domain-icon">🌾</div>
-          <h3 class="domain-name">Agriculture</h3>
-          <p class="domain-desc">Precision spray and monitoring drones designed to optimize crop yield and farm
-            management.</p>
-        </div>
-
-        <div class="domain-card">
-          <div class="domain-icon">🏗</div>
-          <h3 class="domain-name">Industrial</h3>
-          <p class="domain-desc">Automated inspection solutions for power lines, pipelines, and large-scale
-            infrastructure.</p>
-        </div>
-
-        <div class="domain-card">
-          <div class="domain-icon">🗺</div>
-          <h3 class="domain-name">Mapping</h3>
-          <p class="domain-desc">High-resolution photogrammetry and LiDAR systems for accurate surveying and topography.
+          <p style="font-size: 0.98rem; color: var(--text-muted); line-height: 1.85;">
+            Founded by international UAV competition winners. Serving defence, government, industrial,
+            and research operators.
           </p>
-        </div>
-
-        <div class="domain-card">
-          <div class="domain-icon">🎓</div>
-          <h3 class="domain-name">Education</h3>
-          <p class="domain-desc">Advanced UAV kits and research platforms for academic institutions and training
-            centres.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============================================
-       STATISTICS
+       PARTNERS / TRUST STRIP
+       ============================================ -->
+  <section class="partner-strip">
+    <div class="container">
+      <p class="partner-strip-label">Selected Engagements &amp; Partners</p>
+      <div class="partner-grid reveal">
+        <div class="partner-cell">Bjerkwick Defence<span class="meta">Norway · ISR Contract</span></div>
+        <div class="partner-cell">Nirma University<span class="meta">Research Partner</span></div>
+        <div class="partner-cell">SUAS · USA<span class="meta">Intl. Champions 2024</span></div>
+        <div class="partner-cell">Aerothon<span class="meta">National Winners</span></div>
+        <div class="partner-cell">iDEX-Aligned<span class="meta">Make-in-India</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       ENGINEERING PROCESS
+       ============================================ -->
+  <section class="section" id="engineering">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label">Engineering Process</p>
+        <h2 class="section-title">From mission requirement<br/>to <span class="accent">field-ready aircraft.</span></h2>
+        <p class="section-subtitle">
+          Every Verniq platform is engineered through a disciplined eight-stage workflow —
+          spanning requirements capture, design, integration, simulation, and field validation.
+        </p>
+      </div>
+
+      <div class="process-rail reveal">
+        <div class="process-steps stagger-children">
+          <div class="process-step">
+            <div class="process-num">01</div>
+            <h4>Mission Requirement</h4>
+            <p>Operational profile, payload, environment, regulatory framework.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-num">02</div>
+            <h4>Airframe Design</h4>
+            <p>Aero modelling, CFD, structural analysis, CAD &amp; weight budget.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-num">03</div>
+            <h4>Avionics Integration</h4>
+            <p>FCU, ESCs, sensors, datalink — wiring &amp; EMC discipline.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-num">04</div>
+            <h4>Flight Control Tuning</h4>
+            <p>Control loops, autopilot parameters, fail-safes, geo-fencing.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-num">05</div>
+            <h4>Payload Integration</h4>
+            <p>EO/IR, LiDAR, sprayer, RF — mechanical, electrical, software.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-num">06</div>
+            <h4>Simulation &amp; HITL</h4>
+            <p>SITL/HITL flight rehearsals, autonomy regression, edge-case fuzzing.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-num">07</div>
+            <h4>Field Validation</h4>
+            <p>Tethered → free-flight → mission profile → environmental qualification.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-num">08</div>
+            <h4>Deployment</h4>
+            <p>Operator training, documentation handover, lifecycle support.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- BLUEPRINT / EXPLODED-VIEW MEDIA SLOT -->
+      <div class="media-slot media-slot--21x9 reveal" style="margin-top: 70px;">
+        <div class="media-slot-inner">
+          <div class="media-slot-icon">
+            <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18"/><path d="M3 8 L21 8"/><path d="M8 3 L8 21"/></svg>
+          </div>
+          <div class="media-slot-tag">// PLATFORM_EXPLODED.PNG</div>
+          <div class="media-slot-title">Exploded CAD / Blueprint Render</div>
+          <div class="media-slot-hint">Annotated subsystem diagram — airframe, FCU, ESCs, payload bay, datalink, batteries</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FEATURED PLATFORM (with spec preview)
+       ============================================ -->
+  <section class="section section-dark" id="platforms">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label">Featured Platform</p>
+        <h2 class="section-title">Tactical Surveillance UAV.<br/><span class="accent">Engineered for ISR.</span></h2>
+        <p class="section-subtitle">
+          A high-endurance multirotor platform engineered for boundary surveillance, reconnaissance,
+          and persistent ISR — with on-board AI detection and encrypted command links.
+        </p>
+      </div>
+
+      <div class="platform-detail reveal">
+        <div>
+          <!-- PLATFORM HERO IMAGE SLOT -->
+          <div class="media-slot media-slot--4x3">
+            <div class="media-slot-inner">
+              <div class="media-slot-icon">
+                <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14"/><circle cx="12" cy="12" r="3"/></svg>
+              </div>
+              <div class="media-slot-tag">// TSU_HERO.JPG</div>
+              <div class="media-slot-title">Studio / Field Photo</div>
+              <div class="media-slot-hint">High-res aircraft on stand or in pre-flight prep · neutral background or operational scene</div>
+            </div>
+          </div>
+
+          <!-- secondary detail thumbs -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 10px;">
+            <div class="media-slot media-slot--1x1">
+              <div class="media-slot-inner">
+                <div class="media-slot-tag">// SENSOR</div>
+                <div class="media-slot-hint">EO/IR gimbal close-up</div>
+              </div>
+            </div>
+            <div class="media-slot media-slot--1x1">
+              <div class="media-slot-inner">
+                <div class="media-slot-tag">// AVIONICS</div>
+                <div class="media-slot-hint">FCU bay close-up</div>
+              </div>
+            </div>
+            <div class="media-slot media-slot--1x1">
+              <div class="media-slot-inner">
+                <div class="media-slot-tag">// PROP</div>
+                <div class="media-slot-hint">Motor / arm close-up</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="platform-meta">// VRN-TSU-01 · ISR Multirotor</div>
+          <h3 class="platform-name">Tactical Surveillance UAV</h3>
+          <p class="platform-blurb">
+            Multirotor ISR platform with thermal &amp; EO sensing, encrypted C2, and on-board AI detection.
+            Optimized for persistent observation, perimeter monitoring, and reconnaissance.
+          </p>
+
+          <div class="spec-block">
+            <div class="spec-block-head">
+              <span>Datasheet · Rev 1.0</span>
+              <span class="doc-id">VRN-TSU-DS-001</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>Configuration</td><td>Quadcopter · X-frame</td></tr>
+              <tr><td>MTOW</td><td>7.4 <span class="unit">kg</span></td></tr>
+              <tr><td>Payload Capacity</td><td>1.8 <span class="unit">kg</span></td></tr>
+              <tr><td>Endurance</td><td>45 <span class="unit">min</span> @ payload</td></tr>
+              <tr><td>Operating Range</td><td>10 <span class="unit">km</span> BLOS · encrypted link</td></tr>
+              <tr><td>Service Ceiling</td><td>4,500 <span class="unit">m AMSL</span></td></tr>
+              <tr><td>Wind Resistance</td><td>Sustained 12 <span class="unit">m/s</span> · gust 15 <span class="unit">m/s</span></td></tr>
+              <tr><td>Flight Controller</td><td>PX4 / ArduPilot · custom firmware</td></tr>
+              <tr><td>Navigation</td><td>RTK GNSS + VIO fallback (GPS-denied capable)</td></tr>
+              <tr><td>Datalink</td><td>AES-256 · frequency-agile · video downlink</td></tr>
+              <tr><td>Compute</td><td>NVIDIA Jetson Orin · on-board AI inference</td></tr>
+              <tr><td>Payload Compatibility</td><td>EO/IR gimbal · LiDAR · multispectral · custom</td></tr>
+            </table>
+          </div>
+
+          <div style="margin-top: 28px;">
+            <a href="products.html" class="btn btn-outline btn-arrow">View All Platforms</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       MISSION CONTROL / GCS
+       ============================================ -->
+  <section class="section" id="gcs">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label">Mission Control</p>
+        <h2 class="section-title">Operator-grade<br/><span class="accent">Ground Control Station.</span></h2>
+        <p class="section-subtitle">
+          Verniq aircraft are operated through a purpose-built GCS — telemetry, mapping, AI detection
+          overlays, mission rehearsal, and post-flight replay in a single, hardened workspace.
+        </p>
+      </div>
+
+      <div class="gcs-shell reveal">
+        <div class="gcs-bar">
+          <span class="gcs-bar-dot"></span>
+          <span>SYS · LIVE</span>
+          <span style="color: var(--accent-cyan);">VRN-GCS · v2.1</span>
+          <span class="spacer"></span>
+          <span>UTC 14:22:08</span>
+          <span class="telemetry-tag">// TELEMETRY ENCRYPTED</span>
+        </div>
+
+        <div class="gcs-grid">
+          <!-- map / live view slot -->
+          <div class="gcs-map">
+            <span class="gcs-map-tag">// MISSION MAP · SECTOR-04</span>
+            <div class="media-slot media-slot--16x9" style="height: 100%; aspect-ratio: auto; background: transparent; border: none;">
+              <div class="media-slot-inner">
+                <div class="media-slot-icon">
+                  <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 4 15 6 21 4 21 18 15 20 9 18 3 20"/></svg>
+                </div>
+                <div class="media-slot-tag">// GCS_MAP.PNG</div>
+                <div class="media-slot-title">GCS Map / Live Video Screenshot</div>
+                <div class="media-slot-hint">Mission map with waypoints, flight path, geofence, or live downlink frame</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- side panels -->
+          <div class="gcs-side">
+            <div class="gcs-panel">
+              <div class="gcs-panel-label"><span>Aircraft Status</span><span class="value">VRN-TSU · 01</span></div>
+              <div class="gcs-row"><span class="key">FLIGHT MODE</span><span class="val ok">AUTO · MISSION</span></div>
+              <div class="gcs-row"><span class="key">ARMED</span><span class="val ok">YES</span></div>
+              <div class="gcs-row"><span class="key">GPS FIX</span><span class="val ok">RTK · 18 sat</span></div>
+              <div class="gcs-row"><span class="key">LINK QUALITY</span><span class="val ok">98%</span></div>
+            </div>
+
+            <div class="gcs-panel">
+              <div class="gcs-panel-label"><span>Telemetry</span><span class="value">LIVE</span></div>
+              <div class="gcs-row"><span class="key">ALT AGL</span><span class="val">142 m</span></div>
+              <div class="gcs-row"><span class="key">GROUND SPEED</span><span class="val">9.4 m/s</span></div>
+              <div class="gcs-row"><span class="key">HEADING</span><span class="val">274°</span></div>
+              <div class="gcs-row"><span class="key">DISTANCE TO HOME</span><span class="val">2.8 km</span></div>
+            </div>
+
+            <div class="gcs-panel">
+              <div class="gcs-panel-label"><span>Battery</span><span class="value">PACK A · 6S</span></div>
+              <div class="gcs-row"><span class="key">VOLTAGE</span><span class="val">23.4 V</span></div>
+              <div class="gcs-row"><span class="key">REMAINING</span><span class="val warn">62%</span></div>
+              <div class="gcs-bar-fill"><span style="width: 62%;"></span></div>
+            </div>
+
+            <div class="gcs-panel">
+              <div class="gcs-panel-label"><span>Detections · AI</span><span class="value">ACTIVE</span></div>
+              <div class="gcs-row"><span class="key">PERSON</span><span class="val">2</span></div>
+              <div class="gcs-row"><span class="key">VEHICLE</span><span class="val">1</span></div>
+              <div class="gcs-row"><span class="key">UNKNOWN</span><span class="val warn">1</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CASE STUDIES
+       ============================================ -->
+  <section class="section section-dark" id="case-studies">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label">Case Studies</p>
+        <h2 class="section-title">Engineered missions.<br/><span class="accent">Documented outcomes.</span></h2>
+        <p class="section-subtitle">
+          Selected deployments demonstrating how Verniq platforms perform across operational
+          environments and mission profiles.
+        </p>
+      </div>
+
+      <div class="case-grid">
+        <!-- CASE 1 -->
+        <article class="case-card reveal">
+          <div class="case-media">
+            <div class="media-slot media-slot--16x9" style="height: 100%; aspect-ratio: auto;">
+              <div class="media-slot-inner">
+                <div class="media-slot-tag">// CASE_01.JPG</div>
+                <div class="media-slot-title">ISR Mission · Field Photo</div>
+                <div class="media-slot-hint">Aircraft launch, operator station, or downlink frame</div>
+              </div>
+            </div>
+          </div>
+          <div class="case-body">
+            <div class="case-tag">// 2026 · Defence ISR · Norway</div>
+            <h3 class="case-title">Border Surveillance ISR — Bjerkwick Defence</h3>
+            <div class="case-meta">
+              <div class="case-meta-item"><span class="lbl">Platform</span><span class="val">Tactical Surveillance UAV</span></div>
+              <div class="case-meta-item"><span class="lbl">Payload</span><span class="val">EO/IR gimbal · AES-256 link</span></div>
+              <div class="case-meta-item"><span class="lbl">Environment</span><span class="val">Sub-zero Arctic · 0°C–-15°C</span></div>
+              <div class="case-meta-item"><span class="lbl">Duration</span><span class="val">45 min sortie · 3 day cycle</span></div>
+            </div>
+            <p class="case-summary">
+              Engineered an ISR multirotor for cold-climate boundary surveillance. Key challenges:
+              cold-soak battery performance, RF propagation in mountainous terrain, and reliable
+              EO/IR target persistence in low-light.
+            </p>
+            <div class="case-outcome">
+              <span class="lbl">Outcome</span>
+              First international defence contract delivered. Aircraft validated for nominal mission profile, encrypted downlink, and EO/IR detection envelope.
+            </div>
+          </div>
+        </article>
+
+        <!-- CASE 2 -->
+        <article class="case-card reveal">
+          <div class="case-media">
+            <div class="media-slot media-slot--16x9" style="height: 100%; aspect-ratio: auto;">
+              <div class="media-slot-inner">
+                <div class="media-slot-tag">// CASE_02.JPG</div>
+                <div class="media-slot-title">Mapping Output · Orthomosaic</div>
+                <div class="media-slot-hint">Survey-grade map output, GSD callout, or DEM shaded relief</div>
+              </div>
+            </div>
+          </div>
+          <div class="case-body">
+            <div class="case-tag">// 2025 · Mapping · Gujarat</div>
+            <h3 class="case-title">Cadastral Mapping &amp; Terrain Modelling</h3>
+            <div class="case-meta">
+              <div class="case-meta-item"><span class="lbl">Platform</span><span class="val">TerraMapper Pro</span></div>
+              <div class="case-meta-item"><span class="lbl">Payload</span><span class="val">42 MP global-shutter · PPK GNSS</span></div>
+              <div class="case-meta-item"><span class="lbl">Coverage</span><span class="val">28 km² · 2 cm GSD</span></div>
+              <div class="case-meta-item"><span class="lbl">Output</span><span class="val">Ortho · DEM · contours · point cloud</span></div>
+            </div>
+            <p class="case-summary">
+              Survey-grade mapping mission across mixed terrain. Engineered for tight overlap, PPK
+              workflow integration, and georeferenced output suitable for cadastral and engineering
+              consumption.
+            </p>
+            <div class="case-outcome">
+              <span class="lbl">Outcome</span>
+              Survey accepted at &lt; 2 cm horizontal accuracy. Outputs handed over with full metadata, PPK trajectories, and processing reports.
+            </div>
+          </div>
+        </article>
+
+        <!-- CASE 3 -->
+        <article class="case-card reveal">
+          <div class="case-media">
+            <div class="media-slot media-slot--16x9" style="height: 100%; aspect-ratio: auto;">
+              <div class="media-slot-inner">
+                <div class="media-slot-tag">// CASE_03.JPG</div>
+                <div class="media-slot-title">Industrial Inspection</div>
+                <div class="media-slot-hint">Powerline, refinery, or pipeline inspection footage / thermal frame</div>
+              </div>
+            </div>
+          </div>
+          <div class="case-body">
+            <div class="case-tag">// 2025 · Industrial</div>
+            <h3 class="case-title">Power Infrastructure Inspection</h3>
+            <div class="case-meta">
+              <div class="case-meta-item"><span class="lbl">Platform</span><span class="val">Verniq Inspect-X</span></div>
+              <div class="case-meta-item"><span class="lbl">Payload</span><span class="val">EO + radiometric thermal</span></div>
+              <div class="case-meta-item"><span class="lbl">Environment</span><span class="val">High-voltage transmission corridor</span></div>
+              <div class="case-meta-item"><span class="lbl">Duration</span><span class="val">Multi-day campaign</span></div>
+            </div>
+            <p class="case-summary">
+              Automated inspection of high-voltage transmission corridors with thermal anomaly
+              detection and structured imagery handover for asset management workflows.
+            </p>
+            <div class="case-outcome">
+              <span class="lbl">Outcome</span>
+              Hot-spot detection delivered with radiometric data, GPS-tagged imagery, and asset reports for utility consumption.
+            </div>
+          </div>
+        </article>
+
+        <!-- CASE 4 -->
+        <article class="case-card reveal">
+          <div class="case-media">
+            <div class="media-slot media-slot--16x9" style="height: 100%; aspect-ratio: auto;">
+              <div class="media-slot-inner">
+                <div class="media-slot-tag">// CASE_04.JPG</div>
+                <div class="media-slot-title">Agricultural Spraying</div>
+                <div class="media-slot-hint">Spray pattern, terrain-following, or operator-in-field shot</div>
+              </div>
+            </div>
+          </div>
+          <div class="case-body">
+            <div class="case-tag">// 2025 · Agriculture</div>
+            <h3 class="case-title">Precision Spray Automation</h3>
+            <div class="case-meta">
+              <div class="case-meta-item"><span class="lbl">Platform</span><span class="val">Verniq Agri-Shield</span></div>
+              <div class="case-meta-item"><span class="lbl">Payload</span><span class="val">10 L tank · 4-nozzle array</span></div>
+              <div class="case-meta-item"><span class="lbl">Environment</span><span class="val">Undulating terrain · cotton field</span></div>
+              <div class="case-meta-item"><span class="lbl">Coverage</span><span class="val">2.4 ha / sortie</span></div>
+            </div>
+            <p class="case-summary">
+              Autonomous spraying with terrain-following radar, variable rate application, and
+              boundary-aware mission planning — reducing chemical use and improving canopy coverage.
+            </p>
+            <div class="case-outcome">
+              <span class="lbl">Outcome</span>
+              Mission validated against agronomy targets with measurable reduction in input cost per hectare.
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FIELD DEPLOYMENT GALLERY
+       ============================================ -->
+  <section class="section" id="deployment">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label">Field Operations</p>
+        <h2 class="section-title">Built for the field,<br/><span class="accent">documented in service.</span></h2>
+        <p class="section-subtitle">
+          Verniq aircraft operate across diverse environments — from urban perimeters to
+          remote terrain — with operator workflows designed for rapid deployment.
+        </p>
+      </div>
+
+      <div class="deploy-grid reveal">
+        <div class="deploy-cell">
+          <div class="media-slot">
+            <div class="media-slot-inner">
+              <div class="media-slot-tag">// HERO_DEPLOY.JPG</div>
+              <div class="media-slot-title">Lead Field Photograph</div>
+              <div class="media-slot-hint">Operator + aircraft on launch · documentary tone</div>
+            </div>
+          </div>
+        </div>
+        <div class="deploy-cell"><div class="media-slot"><div class="media-slot-inner"><div class="media-slot-tag">// LAUNCH</div><div class="media-slot-hint">Pre-flight</div></div></div></div>
+        <div class="deploy-cell"><div class="media-slot"><div class="media-slot-inner"><div class="media-slot-tag">// MAPPING</div><div class="media-slot-hint">Ortho mission</div></div></div></div>
+        <div class="deploy-cell"><div class="media-slot"><div class="media-slot-inner"><div class="media-slot-tag">// ISR</div><div class="media-slot-hint">Surveillance</div></div></div></div>
+        <div class="deploy-cell"><div class="media-slot"><div class="media-slot-inner"><div class="media-slot-tag">// INSPECT</div><div class="media-slot-hint">Industrial</div></div></div></div>
+        <div class="deploy-cell"><div class="media-slot"><div class="media-slot-inner"><div class="media-slot-tag">// AGRI</div><div class="media-slot-hint">Spraying</div></div></div></div>
+        <div class="deploy-cell"><div class="media-slot"><div class="media-slot-inner"><div class="media-slot-tag">// OPS</div><div class="media-slot-hint">GCS in field</div></div></div></div>
+        <div class="deploy-cell"><div class="media-slot"><div class="media-slot-inner"><div class="media-slot-tag">// TEAM</div><div class="media-slot-hint">Engineering team</div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       R&D / LAB
+       ============================================ -->
+  <section class="section section-dark" id="lab">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label">R&amp;D · Engineering Lab</p>
+        <h2 class="section-title">Where the<br/><span class="accent">aircraft are built.</span></h2>
+        <p class="section-subtitle">
+          Aircraft, avionics, and software developed in-house — from PCB bring-up to
+          autonomy regression to full-system flight tests.
+        </p>
+      </div>
+
+      <div class="lab-strip">
+        <div class="lab-card reveal">
+          <div class="media-slot">
+            <div class="media-slot-inner">
+              <div class="media-slot-tag">// PCB</div>
+              <div class="media-slot-title">Electronics</div>
+              <div class="media-slot-hint">Workbench · soldering · debug</div>
+            </div>
+          </div>
+          <div class="lab-cap">
+            <span class="lbl">// LAB-01</span>
+            <span class="name">Avionics Bench</span>
+          </div>
+        </div>
+        <div class="lab-card reveal">
+          <div class="media-slot">
+            <div class="media-slot-inner">
+              <div class="media-slot-tag">// SITL</div>
+              <div class="media-slot-title">Software</div>
+              <div class="media-slot-hint">Simulation · autopilot · perception</div>
+            </div>
+          </div>
+          <div class="lab-cap">
+            <span class="lbl">// LAB-02</span>
+            <span class="name">Flight Software</span>
+          </div>
+        </div>
+        <div class="lab-card reveal">
+          <div class="media-slot">
+            <div class="media-slot-inner">
+              <div class="media-slot-tag">// CFD</div>
+              <div class="media-slot-title">Aerodynamics</div>
+              <div class="media-slot-hint">Airframe · CAD · CFD</div>
+            </div>
+          </div>
+          <div class="lab-cap">
+            <span class="lbl">// LAB-03</span>
+            <span class="name">Airframe Design</span>
+          </div>
+        </div>
+        <div class="lab-card reveal">
+          <div class="media-slot">
+            <div class="media-slot-inner">
+              <div class="media-slot-tag">// HITL</div>
+              <div class="media-slot-title">Test &amp; Qualification</div>
+              <div class="media-slot-hint">Tethered tests · regression rigs</div>
+            </div>
+          </div>
+          <div class="lab-cap">
+            <span class="lbl">// LAB-04</span>
+            <span class="name">Test Rig</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       UAV SOLUTIONS / DOMAINS
+       ============================================ -->
+  <section class="section" id="capabilities">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label">Mission Domains</p>
+        <h2 class="section-title">Multi-domain<br/><span class="accent">aerial systems.</span></h2>
+      </div>
+
+      <div class="domains-grid stagger-children">
+        <div class="domain-card">
+          <div class="domain-icon">
+            <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L20 6 V12 C20 17 16 21 12 22 C8 21 4 17 4 12 V6 Z"/></svg>
+          </div>
+          <h3 class="domain-name">Defence</h3>
+          <p class="domain-desc">ISR, FPV strike, and tactical platforms for armed forces and border security.</p>
+        </div>
+        <div class="domain-card">
+          <div class="domain-icon">
+            <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9" stroke-dasharray="2 3"/></svg>
+          </div>
+          <h3 class="domain-name">Surveillance</h3>
+          <p class="domain-desc">Long-endurance ISR with EO/IR sensors and on-board AI detection.</p>
+        </div>
+        <div class="domain-card">
+          <div class="domain-icon">
+            <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6 L9 4 L15 6 L21 4 L21 18 L15 20 L9 18 L3 20 Z"/></svg>
+          </div>
+          <h3 class="domain-name">Mapping</h3>
+          <p class="domain-desc">Survey-grade photogrammetry &amp; LiDAR · 2 cm GSD with PPK workflows.</p>
+        </div>
+        <div class="domain-card">
+          <div class="domain-icon">
+            <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21 L9 8 L15 16 L21 11"/><path d="M3 21 L21 21"/></svg>
+          </div>
+          <h3 class="domain-name">Industrial</h3>
+          <p class="domain-desc">Automated inspection of power lines, pipelines, and large infrastructure.</p>
+        </div>
+        <div class="domain-card">
+          <div class="domain-icon">
+            <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L3 8 L12 13 L21 8 Z"/><path d="M3 14 L12 19 L21 14"/></svg>
+          </div>
+          <h3 class="domain-name">Agriculture</h3>
+          <p class="domain-desc">Autonomous spraying with terrain-following sensors and precision farming workflows.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       STATS
        ============================================ -->
   <section class="stats-section section" id="stats">
     <div class="stats-grid">
       <div class="stat-item reveal">
         <div class="stat-number"><span class="counter" data-target="4">0</span><span class="stat-suffix">+</span></div>
-        <div class="stat-label">Years of Expertise</div>
+        <div class="stat-label">Years Engineering</div>
       </div>
       <div class="stat-item reveal">
         <div class="stat-number"><span class="counter" data-target="15">0</span><span class="stat-suffix">+</span></div>
-        <div class="stat-label">Successful Projects</div>
+        <div class="stat-label">Platforms Delivered</div>
       </div>
       <div class="stat-item reveal">
-        <div class="stat-number"><span class="counter" data-target="10">0</span><span class="stat-suffix">+</span></div>
-        <div class="stat-label">Team Members</div>
+        <div class="stat-number"><span class="counter" data-target="6">0</span></div>
+        <div class="stat-label">Mission Domains</div>
       </div>
       <div class="stat-item reveal">
-        <div class="stat-number"><span class="counter" data-target="2">0</span><span class="stat-suffix"></span></div>
-        <div class="stat-label">Global Awards</div>
+        <div class="stat-number"><span class="counter" data-target="2">0</span></div>
+        <div class="stat-label">International Wins</div>
       </div>
     </div>
   </section>
 
   <!-- ============================================
-       ABOUT / FEATURES
+       CERTIFICATIONS / COMPLIANCE
        ============================================ -->
-  <section class="section section-dark" id="about-preview">
+  <section class="section section-dark" id="compliance">
     <div class="container">
       <div class="reveal">
-        <p class="section-label">Why Verniq</p>
-        <h2 class="section-title">Built on Strength.<br />Driven by Purpose.</h2>
+        <p class="section-label">Compliance &amp; Protocol</p>
+        <h2 class="section-title">Operating to<br/><span class="accent">aerospace standards.</span></h2>
         <p class="section-subtitle">
-          We engineer custom UAV solutions built to match your exact
-          mission needs across industries.
+          Verniq aircraft are engineered, documented, and operated against national aerospace,
+          defence procurement, and civil aviation regulatory frameworks.
         </p>
       </div>
 
-      <div class="features-grid stagger-children">
-        <div class="feature-card">
-          <span class="feature-number">01</span>
-          <h3 class="feature-title">Made in India</h3>
-          <p class="feature-text">
-            100% designed and manufactured in India, delivering
-            world-class UAV technology with local engineering excellence.
-          </p>
+      <div class="cert-grid stagger-children">
+        <div class="cert-card">
+          <div class="cert-mark">// REGULATION</div>
+          <h4>DGCA-Aligned</h4>
+          <p>Designed against Drone Rules 2021 and DGCA airworthiness expectations.</p>
         </div>
-
-        <div class="feature-card">
-          <span class="feature-number">02</span>
-          <h3 class="feature-title">AI & Autonomous Systems</h3>
-          <p class="feature-text">
-            Next-generation artificial intelligence powering autonomous
-            decision-making and mission efficiency in real-time.
-          </p>
+        <div class="cert-card">
+          <div class="cert-mark">// QUALITY</div>
+          <h4>ISO 9001 Practices</h4>
+          <p>Manufacturing and process discipline aligned to ISO 9001 quality systems.</p>
         </div>
-
-        <div class="feature-card">
-          <span class="feature-number">03</span>
-          <h3 class="feature-title">Easy to Operate</h3>
-          <p class="feature-text">
-            Intuitive controls and streamlined workflows designed for rapid deployment and minimal training time.
-          </p>
+        <div class="cert-card">
+          <div class="cert-mark">// PROCUREMENT</div>
+          <h4>iDEX-Ready</h4>
+          <p>Capability profile aligned with iDEX, Make-in-India, and defence procurement pathways.</p>
         </div>
-
-        <div class="feature-card">
-          <span class="feature-number">04</span>
-          <h3 class="feature-title">4+ Years of Expertise</h3>
-          <p class="feature-text">
-            Our core team brings over 4 years of deep-tech experience in
-            UAV research, autonomous navigation, and precision engineering.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <span class="feature-number">05</span>
-          <h3 class="feature-title">Global Recognition</h3>
-          <p class="feature-text">
-            Winners of 2 prestigious International UAV Competitions in the USA
-            (SUAS), proving our technology leads on the world stage.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <span class="feature-number">06</span>
-          <h3 class="feature-title">Proven Track Record</h3>
-          <p class="feature-text">
-            Successfully built 15+ custom drones and won multiple
-            awards both nationally and internationally for mission excellence.
-          </p>
+        <div class="cert-card">
+          <div class="cert-mark">// SECURITY</div>
+          <h4>Secure-by-Design</h4>
+          <p>AES-256 telemetry, hardened firmware, NDA-gated configurations, supply-chain awareness.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============================================
-       PROJECT SHOWCASE
-       ============================================ -->
-  <section class="section" id="products-preview">
-    <div class="container">
-      <div class="reveal">
-        <p class="section-label">Our Work</p>
-        <h2 class="section-title">Projects Built for<br />Real-World Missions</h2>
-        <p class="section-subtitle">
-          From concept to deployment — custom UAV platforms
-          engineered to solve your toughest operational challenges.
-        </p>
-      </div>
-
-      <div class="product-grid stagger-children">
-        <div class="product-card">
-          <div class="product-image">
-            <img src="images/surveillance.jpg" alt="Surveillance UAV" />
-            <div class="product-image-overlay"></div>
-          </div>
-          <div class="product-body">
-            <span class="product-category">Defence · Surveillance</span>
-            <h3 class="product-title">Tactical Surveillance UAV</h3>
-            <p class="product-desc">High-endurance platform with thermal imaging and AI-powered detection for boundary
-              security and reconnaissance.</p>
-            <a href="products.html" class="product-link">View Project →</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image">
-            <img src="images/agri.png" alt="Agricultural Spray Drone" />
-            <div class="product-image-overlay"></div>
-          </div>
-          <div class="product-body">
-            <span class="product-category">Agriculture · Spraying</span>
-            <h3 class="product-title">Verniq Agri-Shield</h3>
-            <p class="product-desc">Autonomous precision spraying system with terrain-following sensors for optimized
-              crop health and farm management.</p>
-            <a href="products.html" class="product-link">View Project →</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image">
-            <img src="images/FPV.png" alt="FPV combact UAV" />
-            <div class="product-image-overlay"></div>
-          </div>
-          <div class="product-body">
-            <span class="product-category">Defence · FPV</span>
-            <h3 class="product-title">FPV combact UAV</h3>
-            <p class="product-desc">Specialized UAV for defence and security purposes.</p>
-            <a href="products.html" class="product-link">View Project →</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image">
-            <img src="images/Mapping.jpg" alt="Survey & Mapping Drone" />
-            <div class="product-image-overlay"></div>
-          </div>
-          <div class="product-body">
-            <span class="product-category">Mapping · Survey</span>
-            <h3 class="product-title">TerraMapper Pro</h3>
-            <p class="product-desc">Multi-rotor options for survey-grade 3D mapping, photogrammetry, and
-              cadastral surveying.</p>
-            <a href="products.html" class="product-link">View Project →</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image">
-            <img src="images/education.png" alt="Educational Drone" />
-            <div class="product-image-overlay"></div>
-          </div>
-          <div class="product-body">
-            <span class="product-category">Education · Research</span>
-            <h3 class="product-title">Educational Drone</h3>
-            <p class="product-desc">Open-source drone kits designed for universities for research in
-              autonomous navigation and AI.</p>
-            <a href="products.html" class="product-link">View Project →</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image">
-            <img src="images/photo drone.png  " alt="Aerial Cinematography Drone" />
-            <div class="product-image-overlay"></div>
-          </div>
-          <div class="product-body">
-            <span class="product-category">Cinematography · Aerial</span>
-            <h3 class="product-title">SkyFrame Cinema UAV</h3>
-            <p class="product-desc">Precision stabilized aerial platform for professional cinema-grade videography and
-              high-altitude photography.</p>
-            <a href="products.html" class="product-link">View Project →</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- ============================================
-       CTA SECTION
+       CTA
        ============================================ -->
   <section class="cta-section section" id="cta">
     <div class="container">
       <div class="cta-content reveal">
-        <p class="section-label" style="justify-content: center;">Partner With Us</p>
-        <h2 class="cta-title">Ready to Build<br />Your Custom UAV?</h2>
+        <p class="section-label" style="justify-content: center;">Engagement</p>
+        <h2 class="cta-title">Brief our engineering<br /><span style="color: var(--accent-cyan);">team.</span></h2>
         <p class="cta-text">
-          Connect with our team to explore how Verniq's technology
-          can meet your specific mission requirements.
+          Tell us about your mission profile. We'll respond within 24 hours with an
+          initial capability brief and proposed next steps.
         </p>
         <div class="hero-actions">
-          <a href="contact.html" class="btn btn-primary btn-arrow">Contact Us</a>
-          <a href="products.html" class="btn btn-outline">View Capabilities</a>
+          <a href="contact.html" class="btn btn-primary btn-arrow">Request Briefing</a>
+          <a href="images/2025.pdf" target="_blank" class="btn btn-outline">Download Capabilities</a>
         </div>
       </div>
     </div>
@@ -439,46 +897,52 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="nav-logo">
-            <img src="images/icon.svg" alt="Verniq Logo Icon" class="nav-logo-icon-img" />
+            <img src="images/icon.svg" alt="Verniq" class="nav-logo-icon-img" />
             <div class="nav-logo-text-wrapper">
               <span class="nav-logo-title">Verniq UAVs</span>
-              <span class="nav-logo-tagline">Next gen aerial solutions</span>
+              <span class="nav-logo-tagline">Advanced Aerial Systems</span>
             </div>
           </a>
           <p class="footer-brand-text">
-            India's premier manufacturer of customized UAV solutions
-            bridging defence, industry, and education.
+            Verniq engineers advanced autonomous aerial platforms for defence, surveillance,
+            mapping, and enterprise operations — designed and manufactured in India.
           </p>
         </div>
-
         <div>
           <h4 class="footer-heading">Company</h4>
-          <a href="about.html" class="footer-link">About Us</a>
+          <a href="about.html" class="footer-link">About</a>
           <a href="about.html#leadership" class="footer-link">Leadership</a>
+          <a href="about.html#story" class="footer-link">Our Story</a>
+          <a href="about.html#careers" class="footer-link">Careers</a>
         </div>
-
         <div>
-          <h4 class="footer-heading">Projects</h4>
-          <a href="products.html" class="footer-link">Defence UAVs</a>
-          <a href="products.html" class="footer-link">Agriculture</a>
-          <a href="products.html" class="footer-link">Industrial</a>
-          <a href="products.html" class="footer-link">Education</a>
+          <h4 class="footer-heading">Engineering</h4>
+          <a href="products.html" class="footer-link">Platforms</a>
+          <a href="index.html#engineering" class="footer-link">Process</a>
+          <a href="index.html#gcs" class="footer-link">Mission Control</a>
+          <a href="index.html#case-studies" class="footer-link">Case Studies</a>
         </div>
-
         <div>
-          <h4 class="footer-heading">Contact</h4>
-          <a href="contact.html" class="footer-link">Get in Touch</a>
+          <h4 class="footer-heading">Engagement</h4>
+          <a href="contact.html" class="footer-link">Request Brief</a>
+          <a href="contact.html" class="footer-link">Press &amp; Media</a>
+          <a href="contact.html" class="footer-link">Partnerships</a>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p class="footer-copy">&copy; 2026 Verniq UAVs. All rights reserved.</p>
+        <p class="footer-copy">© 2026 Verniq UAVs Pvt Ltd · All rights reserved</p>
         <div class="footer-socials">
           <a href="#" class="footer-social-link" aria-label="LinkedIn">in</a>
           <a href="#" class="footer-social-link" aria-label="Twitter">𝕏</a>
           <a href="#" class="footer-social-link" aria-label="YouTube">▶</a>
         </div>
       </div>
+
+      <p class="footer-compliance">
+        Designed &amp; Manufactured in India · DGCA-Aligned · iDEX Capability Profile<br/>
+        Defence configurations subject to SCOMET / export-control review · Restricted variants available under NDA
+      </p>
     </div>
   </footer>
 
